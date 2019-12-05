@@ -1,0 +1,34 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not request any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+
+provider.request.list.label.ticker= Ticker
+provider.request.list.label.reward= Reward 
+provider.request.list.label.deadline= Deadline
+provider.request.list.label.moment= Moment
+provider.request.list.label.text= Text
+provider.request.list.label.title= Title
+ 
+provider.request.form.label.reward = Reward
+provider.request.form.label.title = Title
+provider.request.form.label.text = Text 
+provider.request.form.label.ticker= Ticker 
+provider.request.form.label.deadline = Deadline
+
+provider.request.form.label.sure = Are you sure?
+
+provider.request.form.button.create = Create
+provider.request.form.button.return = Return
+
+provider.request.error.dateafter = Deadline must be in future
+provider.request.error.euro = Only the euro, EUR or € currency is allowed
+provider.request.error.sure = The checkbox must be selected
+provider.request.error.tickers = This Ticker has already been registered

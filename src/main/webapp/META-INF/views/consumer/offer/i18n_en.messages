@@ -1,0 +1,39 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+
+consumer.offer.list.label.ticker= Ticker
+consumer.offer.list.label.rewardMax= Reward max
+consumer.offer.list.label.rewardMin= Reward min
+
+consumer.offer.list.label.deadline= Deadline
+consumer.offer.list.label.moment= Moment
+consumer.offer.list.label.text= Text
+consumer.offer.list.label.title= Title
+ 
+consumer.offer.form.label.rewardMax = Reward max
+consumer.offer.form.label.rewardMin = Reward min
+
+consumer.offer.form.label.title = Title
+consumer.offer.form.label.text = Text 
+consumer.offer.form.label.ticker= Ticker
+consumer.offer.form.label.deadline = Deadline
+
+consumer.offer.form.label.sure = Are you sure?
+
+consumer.offer.form.button.create = Create
+consumer.offer.form.button.return = Return
+
+consumer.offer.error.dateafter = Deadline must be in future
+consumer.offer.error.euro = Only the euro, EUR or € currency is allowed
+consumer.offer.error.minmax = The Maximum Reward must be greater than the Minimum
+consumer.offer.error.sure = The checkbox must be selected
+consumer.offer.error.tickers = This Ticker has already been registered
