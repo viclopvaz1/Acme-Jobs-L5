@@ -35,6 +35,9 @@ public class Application extends DomainEntity {
 	@Past
 	private Date				moment;
 
+	//pending
+	//accepted
+	//rejected
 	@NotBlank
 	private String				status;
 
@@ -44,6 +47,10 @@ public class Application extends DomainEntity {
 	@Column(length = 1024)
 	@NotBlank
 	private String				qualifications;
+
+	//----------------
+	@Column(length = 1024)
+	private String				reason;
 
 	//Relationships--------------------------------------------------------------
 
