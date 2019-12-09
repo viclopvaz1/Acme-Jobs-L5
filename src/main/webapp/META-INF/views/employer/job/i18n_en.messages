@@ -23,6 +23,10 @@ employer.job.form.label.auditor = Auditor:
 employer.job.form.label.employer = Employer:
 employer.job.form.label.auditor = Auditor:
 employer.job.form.button.audit-record = Audits Records 
+
+employer.job.form.button.create = Create
+employer.job.form.button.update = Update
+employer.job.form.button.delete = Delete
 employer.job.form.button.duty = Duties 
 employer.job.form.button.return = Return
 

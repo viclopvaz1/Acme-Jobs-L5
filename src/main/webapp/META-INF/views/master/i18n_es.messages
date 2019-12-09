@@ -94,6 +94,7 @@ master.menu.consumer = Consumidor
 
 master.menu.employer = Empleador
 master.menu.employer.list-mine-job = Lista de Trabajos
+master.menu.employer.create-job = Crear Trabajo
 master.menu.employer.list-mine-application = Lista de Solicitudes
 
 # master.menu.auditor ########################################################

@@ -21,6 +21,10 @@ employer.job.form.label.moreInfo = Más información:
 employer.job.form.label.employer = Empleador:
 employer.job.form.label.auditor = Auditor:
 employer.job.form.button.audit-record = Records de Auditores
+
+employer.job.form.button.create = Crear
+employer.job.form.button.update = Actualizar
+employer.job.form.button.delete = Borrar
 employer.job.form.button.duty = Responsabilidades 
 employer.job.form.button.return = Volver
 
