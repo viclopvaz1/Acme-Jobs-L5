@@ -24,11 +24,17 @@
 		<acme:form-textbox code="employer.application.form.label.job" path="job.reference"/>
 		<acme:form-textbox code="employer.application.form.label.worker" path="worker.identity.fullName"/>
 	</jstl:if>
-	<acme:form-textbox  code="employer.application.form.label.status" path="status"/>
-	<jstl:if test="${status=='rejected' || command=='update'}">
+	<acme:form-select code="employer.application.form.label.status" path="status">
+    	<jstl:if test="${command!='update'}"> 
+    		<option value="pending" <jstl:if test="${status =='pending'}">selected</jstl:if>>pending</option>
+    	</jstl:if>
+    	<option value="accepted" <jstl:if test="${status =='accepted'}">selected</jstl:if>>accepted</option>
+    	<option value="rejected" <jstl:if test="${status =='rejected'}">selected</jstl:if>>rejected</option>
+	</acme:form-select>
+	<jstl:if test="${status!='pending' || command=='update'}">
 		<acme:form-textarea code="employer.application.form.label.reason" path="reason"/>
 	</jstl:if>
-	<acme:form-submit test="${command == 'show'}" code="employer.job.form.button.status" action="/employer/application/update?id=${id}" method = "get"/>
-	<acme:form-submit test="${command == 'update'}" code="employer.job.form.button.reason" action="/employer/application/update"/>
+	<acme:form-submit test="${command == 'show' && status=='pending'}" code="employer.application.form.button.status" action="/employer/application/update?id=${id}" method = "get"/>
+	<acme:form-submit test="${command == 'update'}" code="employer.application.form.button.reason" action="/employer/application/update"/>
   	<acme:form-return code="employer.application.form.button.return"/>
 </acme:form>

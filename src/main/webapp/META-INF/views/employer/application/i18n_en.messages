@@ -10,6 +10,7 @@
 
 employer.application.list.label.referenceNumber = Reference Number
 employer.application.list.label.moment = Moment
+employer.application.list.label.status = Status
 
 employer.application.form.label.referenceNumber = Reference Number: 
 employer.application.form.label.moment = Moment: 
@@ -18,5 +19,10 @@ employer.application.form.label.skills = Skills:
 employer.application.form.label.qualifications = Qualification: 
 employer.application.form.label.job: Job:
 employer.application.form.label.worker: Worker:
+employer.application.form.label.reason = Reason:
 
+employer.application.form.button.status = Change Status
+employer.application.form.button.reason = Update and send reason
 employer.application.form.button.return = Return
+
+employer.application.error.reason = For rejected you need one reason

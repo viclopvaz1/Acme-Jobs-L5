@@ -85,9 +85,6 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 		assert entity != null;
 		assert errors != null;
 
-		if (!errors.hasErrors("status")) {
-			errors.state(request, entity.getStatus().equals("rejected") || entity.getStatus().equals("accepted") || entity.getStatus().equals("pendding"), "status", "employer.application.error.status");
-		}
 		if (!errors.hasErrors("reason")) {
 			errors.state(request, entity.getReason() != null && entity.getReason() != "" || !entity.getStatus().equals("rejected"), "reason", "employer.application.error.reason");
 
