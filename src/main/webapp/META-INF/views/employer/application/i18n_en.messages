@@ -10,6 +10,9 @@
 
 employer.application.list.label.referenceNumber = Reference Number
 employer.application.list.label.moment = Moment
+employer.application.list.label.status = Status 
+employer.application.list.label.skills = Skills
+employer.application.list.label.qualifications = Qualification 
 
 employer.application.form.label.referenceNumber = Reference Number: 
 employer.application.form.label.moment = Moment: 

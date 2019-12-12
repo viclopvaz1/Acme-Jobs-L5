@@ -271,6 +271,7 @@
         `authenticated_id` integer not null
     ) engine=InnoDB;
 
+
     create table `thread_message` (
        `thread_id` integer not null,
         `messages_id` integer not null
