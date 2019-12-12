@@ -42,6 +42,7 @@ public class Application extends DomainEntity {
 	private String				status;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				statement;
 
 	@NotBlank
@@ -53,7 +54,7 @@ public class Application extends DomainEntity {
 
 	//----------------
 	@Column(length = 1024)
-	private String				statement;
+	private String				reason;
 
 	//Relationships--------------------------------------------------------------
 

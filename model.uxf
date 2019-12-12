@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1337</x>
+      <x>959</x>
       <y>77</y>
       <w>238</w>
       <h>91</h>
@@ -26,7 +26,7 @@ UserAccount
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1099</x>
+      <x>721</x>
       <y>42</y>
       <w>217</w>
       <h>77</h>
@@ -43,7 +43,7 @@ Announcement
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>826</x>
+      <x>448</x>
       <y>7</y>
       <w>259</w>
       <h>119</h>
@@ -65,7 +65,7 @@ Challenge
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1043</x>
+      <x>665</x>
       <y>770</y>
       <w>287</w>
       <h>91</h>
@@ -83,7 +83,7 @@ NonComercialBanner
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2961</x>
+      <x>2583</x>
       <y>1036</y>
       <w>287</w>
       <h>105</h>
@@ -102,7 +102,7 @@ Request
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2527</x>
+      <x>2149</x>
       <y>1106</y>
       <w>252</w>
       <h>112</h>
@@ -123,7 +123,7 @@ Offer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>378</x>
+      <x>0</x>
       <y>1029</y>
       <w>154</w>
       <h>91</h>
@@ -145,7 +145,7 @@ CompanyRecord
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1666</x>
+      <x>1288</x>
       <y>413</y>
       <w>168</w>
       <h>42</h>
@@ -159,7 +159,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1484</x>
+      <x>1106</x>
       <y>448</y>
       <w>273</w>
       <h>182</h>
@@ -170,7 +170,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1316</x>
+      <x>938</x>
       <y>343</y>
       <w>154</w>
       <h>84</h>
@@ -190,7 +190,7 @@ bg=orange
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1316</x>
+      <x>938</x>
       <y>280</y>
       <w>168</w>
       <h>42</h>
@@ -203,7 +203,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1386</x>
+      <x>1008</x>
       <y>315</y>
       <w>21</w>
       <h>42</h>
@@ -215,7 +215,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1701</x>
+      <x>1323</x>
       <y>448</y>
       <w>56</w>
       <h>238</h>
@@ -226,7 +226,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1911</x>
+      <x>1533</x>
       <y>420</y>
       <w>70</w>
       <h>42</h>
@@ -241,7 +241,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1911</x>
+      <x>1533</x>
       <y>364</y>
       <w>70</w>
       <h>42</h>
@@ -256,7 +256,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1911</x>
+      <x>1533</x>
       <y>469</y>
       <w>70</w>
       <h>42</h>
@@ -271,7 +271,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1827</x>
+      <x>1449</x>
       <y>392</y>
       <w>98</w>
       <h>56</h>
@@ -282,7 +282,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1827</x>
+      <x>1449</x>
       <y>427</y>
       <w>98</w>
       <h>21</h>
@@ -293,7 +293,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1827</x>
+      <x>1449</x>
       <y>427</y>
       <w>98</w>
       <h>63</h>
@@ -304,7 +304,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1316</x>
+      <x>938</x>
       <y>441</y>
       <w>154</w>
       <h>56</h>
@@ -321,7 +321,7 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1365</x>
+      <x>987</x>
       <y>616</y>
       <w>161</w>
       <h>63</h>
@@ -336,7 +336,7 @@ Provider
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1589</x>
+      <x>1211</x>
       <y>672</y>
       <w>161</w>
       <h>63</h>
@@ -351,7 +351,7 @@ Consumer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1148</x>
+      <x>770</x>
       <y>343</y>
       <w>154</w>
       <h>56</h>
@@ -368,7 +368,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1148</x>
+      <x>770</x>
       <y>413</y>
       <w>154</w>
       <h>91</h>
@@ -388,7 +388,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1148</x>
+      <x>770</x>
       <y>518</y>
       <w>154</w>
       <h>63</h>
@@ -405,7 +405,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1624</x>
+      <x>1246</x>
       <y>245</y>
       <w>238</w>
       <h>91</h>
@@ -427,7 +427,7 @@ UserAccount
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1743</x>
+      <x>1365</x>
       <y>329</y>
       <w>49</w>
       <h>98</h>
@@ -441,7 +441,7 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1673</x>
+      <x>1295</x>
       <y>784</y>
       <w>357</w>
       <h>126</h>
@@ -462,23 +462,7 @@ Application
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2002</x>
-      <y>21</y>
-      <w>217</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>Announcement
---
-+ title: String (NotBlank)
-+ moment: Date (Temporal(TIMESTAMP), Past)
-+ moreInfo: String (URL)
-+ text: String (NotBlank)</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>2233</x>
+      <x>1855</x>
       <y>0</y>
       <w>259</w>
       <h>133</h>
@@ -499,7 +483,7 @@ Application
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1582</x>
+      <x>1204</x>
       <y>0</y>
       <w>420</w>
       <h>56</h>
@@ -514,37 +498,7 @@ Application
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1561</x>
-      <y>1176</y>
-      <w>196</w>
-      <h>49</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Service&gt;&gt;
-AnonymousInvestorRecordController
---
--initialise(): void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>980</x>
-      <y>1071</y>
-      <w>238</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-AnonymousInvestorRecordRepository
---
-+findMany(): Collections&lt;InvestorRecord&gt;
-+findOneById(int id): InvestorRecord
-+findManyStars(): Collections&lt;InvestorRecord&gt;</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1435</x>
+      <x>1057</x>
       <y>1372</y>
       <w>378</w>
       <h>70</h>
@@ -560,542 +514,7 @@ AnonymousInvestorRecordListService
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>980</x>
-      <y>1190</y>
-      <w>378</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-AnonymousInvestorRecordListTopsService
---
-+authorise(r: Request&lt;InvestorRecord&gt;): boolean
-+unbind(r: Request&lt;InvestorRecord&gt;, e InvestorRecord , m: Model):void
-+findMany(r: Request&lt;InvestorRecord&gt;): Collections&lt;InvestorRecord&gt;</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1435</x>
-      <y>1253</y>
-      <w>378</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Service&gt;&gt;
-AnonymousInvestorRecordShowService
---
-+authorise(r: Request&lt;InvestorRecord&gt;): boolean
-+unbind(r: Request&lt;InvestorRecord&gt;, e: InvestorRecord, m: Model): void
-+findOne(r: Request&lt;InvestorRecord&gt;): InvestorRecord</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1617</x>
-      <y>1218</y>
-      <w>56</w>
-      <h>49</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;50.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1148</x>
-      <y>1127</y>
-      <w>420</w>
-      <h>259</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>580.0;350.0;490.0;330.0;80.0;50.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1064</x>
-      <y>1127</y>
-      <w>42</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>20.0;90.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1211</x>
-      <y>1099</y>
-      <w>238</w>
-      <h>203</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>320.0;270.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>2226</x>
-      <y>1232</y>
-      <w>238</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-AnonymousCompanyRecordRepository
---
-+findMany(): Collections&lt;CompanyRecord&gt;
-+findOneById(int id): CompanyRecord
-+findManyStars(): Collections&lt;CompanyRecord&gt;</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>2688</x>
-      <y>1239</y>
-      <w>385</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Service&gt;&gt;
-AnonymousCompanyRecordShowService
---
-+authorise(r: Request&lt;CompanyRecord&gt;): boolean
-+unbind(r: Request&lt;CompanyRecord&gt;, e: CompanyRecord, m: Model): void
-+findOne(r: Request&lt;CompanyRecord&gt;): CompanyRecord</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>2373</x>
-      <y>1323</y>
-      <w>378</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-AnonymousCompanyRecordListService
---
-+authorise(r: Request&lt;CompanyRecord&gt;): boolean
-+unbind(r: Request&lt;CompanyRecord&gt;, e CompanyRecord , m: Model):void
-+findMany(r: Request&lt;CompanyRecord&gt;): Collections&lt;CompanyRecord&gt;</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1918</x>
-      <y>1365</y>
-      <w>378</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-AnonymousCompanyRecordListTopsService
---
-+authorise(r: Request&lt;CompanyRecord&gt;): boolean
-+unbind(r: Request&lt;CompanyRecord&gt;, e CompanyRecord , m: Model):void
-+findMany(r: Request&lt;CompanyRecord&gt;): Collections&lt;CompanyRecord&gt;</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>2856</x>
-      <y>1155</y>
-      <w>196</w>
-      <h>49</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Service&gt;&gt;
-AnonymousCompanyRecordController
---
--initialise(): void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>2919</x>
-      <y>1197</y>
-      <w>49</w>
-      <h>56</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>2051</x>
-      <y>1232</y>
-      <w>308</w>
-      <h>147</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>10.0;190.0;300.0;100.0;340.0;10.0;420.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>2429</x>
-      <y>1260</y>
-      <w>84</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>100.0;90.0;100.0;20.0;20.0;20.0;10.0;50.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>2457</x>
-      <y>1260</y>
-      <w>245</w>
-      <h>35</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>330.0;30.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>2919</x>
-      <y>805</y>
-      <w>238</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-AuthenticatedCompanyRecordRepository
---
-+findMany(): Collections&lt;CompanyRecord&gt;
-+findOneById(int id): CompanyRecord</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>3087</x>
-      <y>707</y>
-      <w>385</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Service&gt;&gt;
-AuthenticatedCompanyRecordShowService
---
-+authorise(r: Request&lt;CompanyRecord&gt;): boolean
-+unbind(r: Request&lt;CompanyRecord&gt;, e: CompanyRecord, m: Model): void
-+findOne(r: Request&lt;CompanyRecord&gt;): CompanyRecord</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>3045</x>
-      <y>742</y>
-      <w>203</w>
-      <h>168</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>60.0;10.0;270.0;220.0;10.0;180.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>3318</x>
-      <y>637</y>
-      <w>378</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-AuthenticatedCompanyRecordListService
---
-+authorise(r: Request&lt;CompanyRecord&gt;): boolean
-+unbind(r: Request&lt;CompanyRecord&gt;, e CompanyRecord , m: Model):void
-+findMany(r: Request&lt;CompanyRecord&gt;): Collections&lt;CompanyRecord&gt;</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>3045</x>
-      <y>623</y>
-      <w>287</w>
-      <h>196</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>390.0;70.0;60.0;10.0;10.0;260.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>3339</x>
-      <y>728</y>
-      <w>224</w>
-      <h>49</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Service&gt;&gt;
-AuthenticatedCompanyRecordController
---
--initialise(): void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>3283</x>
-      <y>721</y>
-      <w>182</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>240.0;10.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>385</x>
-      <y>679</y>
-      <w>238</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-AuthenticatedInvestorRecordRepository
---
-+findMany(): Collections&lt;InvestorRecord&gt;
-+findOneById(int id): InvestorRecord</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>105</x>
-      <y>833</y>
-      <w>378</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Service&gt;&gt;
-AuthenticatedInvestorRecordShowService
---
-+authorise(r: Request&lt;InvestorRecord&gt;): boolean
-+unbind(r: Request&lt;InvestorRecord&gt;, e: InvestorRecord, m: Model): void
-+findOne(r: Request&lt;InvestorRecord&gt;): InvestorRecord</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>56</x>
-      <y>581</y>
-      <w>378</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-AuthenticatedInvestorRecordListService
---
-+authorise(r: Request&lt;InvestorRecord&gt;): boolean
-+unbind(r: Request&lt;InvestorRecord&gt;, e InvestorRecord , m: Model):void
-+findMany(r: Request&lt;InvestorRecord&gt;): Collections&lt;InvestorRecord&gt;</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>119</x>
-      <y>728</y>
-      <w>196</w>
-      <h>49</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Service&gt;&gt;
-AuthenticatedInvestorRecordController
---
--initialise(): void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>441</x>
-      <y>735</y>
-      <w>35</w>
-      <h>112</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>385</x>
-      <y>644</y>
-      <w>70</w>
-      <h>49</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;50.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>231</x>
-      <y>770</y>
-      <w>42</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>10.0;10.0;20.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>259</x>
-      <y>343</y>
-      <w>238</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-AuthenticatedAnnouncementRepository
---
-+findMany(): Collections&lt;Announcement&gt;
-+findOneById(int id): Announcement</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>14</x>
-      <y>245</y>
-      <w>378</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Interface&gt;&gt;
-AuthenticatedAnnouncementListService
---
-+authorise(r: Request&lt;Announcement&gt;): boolean
-+unbind(r: Request&lt;Announcement&gt;, e Announcement , m: Model):void
-+findMany(r: Request&lt;Announcement&gt;): Collections&lt;Announcement&gt;</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>0</x>
-      <y>469</y>
-      <w>378</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Service&gt;&gt;
-AuthenticatedAnnouncementShowService
---
-+authorise(r: Request&lt;Announcement&gt;): boolean
-+unbind(r: Request&lt;Announcement&gt;, e: Announcement, m: Model): void
-+findOne(r: Request&lt;Announcement&gt;): Announcement</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>49</x>
-      <y>385</y>
-      <w>196</w>
-      <h>49</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Service&gt;&gt;
-AuthenticatedAnnouncementController
---
--initialise(): void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>280</x>
-      <y>399</y>
-      <w>35</w>
-      <h>84</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>287</x>
-      <y>308</y>
-      <w>63</w>
-      <h>49</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;50.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>147</x>
-      <y>308</y>
-      <w>49</w>
-      <h>91</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-Use</panel_attributes>
-    <additional_attributes>40.0;110.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>77</x>
-      <y>924</y>
-      <w>378</w>
-      <h>98</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Service&gt;&gt;
-AuthenticatedOfferCreateService
---
-+bind(r: Request&lt;Offer&gt;, e: Offer, e: Errors): void
-+instantiate(r: Request&lt;Offer&gt;): Offer {
-+validate(r: Request&lt;Offer&gt;, e: Offer, e: Errors): void
-+create(r: Request&lt;Offer&gt;, e: Offer): void
-+authorise(r: Request&lt;Offer&gt;): boolean
-+unbind(r: Request&lt;Offer&gt; request, e: Offer, m: Model): void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>2527</x>
-      <y>56</y>
-      <w>574</w>
-      <h>98</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Service&gt;&gt;
-AuthenticatedRequestCreateService
---
-+bind(r: Request&lt;acme.entities.requests.Request&gt;, e: acme.entities.requests.Request, e: Errors): void
-+instantiate(r: Request&lt;acme.entities.requests.Request&gt;): acme.entities.requests.Request {
-+validate(r: Request&lt;acme.entities.requests.Request&gt;, e: acme.entities.requests.Request, e: Errors): void
-+create(r: Request&lt;acme.entities.requests.Request&gt;, e: acme.entities.requests.Request): void
-+authorise(r: Request&lt;acme.entities.requests.Request&gt; ): boolean
-+unbind(r: Request&lt;acme.entities.requests.Request&gt; request, e: acme.entities.requests.Request, m: Model): void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1771</x>
+      <x>1393</x>
       <y>672</y>
       <w>210</w>
       <h>63</h>
@@ -1110,7 +529,7 @@ Worker
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1316</x>
+      <x>938</x>
       <y>525</y>
       <w>231</w>
       <h>63</h>
@@ -1125,7 +544,7 @@ Auditor
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1505</x>
+      <x>1127</x>
       <y>448</y>
       <w>252</w>
       <h>91</h>
@@ -1136,7 +555,7 @@ Auditor
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1736</x>
+      <x>1358</x>
       <y>448</y>
       <w>154</w>
       <h>238</h>
@@ -1147,7 +566,7 @@ Auditor
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1995</x>
+      <x>1617</x>
       <y>672</y>
       <w>161</w>
       <h>63</h>
@@ -1162,7 +581,7 @@ Employer
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1736</x>
+      <x>1358</x>
       <y>448</y>
       <w>308</w>
       <h>238</h>
@@ -1173,7 +592,7 @@ Employer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2758</x>
+      <x>2380</x>
       <y>1330</y>
       <w>189</w>
       <h>77</h>
@@ -1190,7 +609,7 @@ InvestorRecord
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2128</x>
+      <x>1750</x>
       <y>826</y>
       <w>357</w>
       <h>91</h>
@@ -1208,7 +627,7 @@ AuditRecord
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2422</x>
+      <x>2044</x>
       <y>308</y>
       <w>329</w>
       <h>98</h>
@@ -1227,21 +646,7 @@ Message
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3080</x>
-      <y>1169</y>
-      <w>189</w>
-      <h>49</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Descriptor
---
-+description: String {NotBlank}</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1876</x>
+      <x>1498</x>
       <y>931</y>
       <w>420</w>
       <h>133</h>
@@ -1263,7 +668,7 @@ Job
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1911</x>
+      <x>1533</x>
       <y>1134</y>
       <w>350</w>
       <h>77</h>
@@ -1280,7 +685,7 @@ Duty
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2072</x>
+      <x>1694</x>
       <y>238</y>
       <w>336</w>
       <h>70</h>
@@ -1296,7 +701,7 @@ Thread
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1456</x>
+      <x>1078</x>
       <y>770</y>
       <w>210</w>
       <h>63</h>
@@ -1311,7 +716,7 @@ Sponsor
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1505</x>
+      <x>1127</x>
       <y>448</y>
       <w>259</w>
       <h>336</h>
@@ -1322,7 +727,7 @@ Sponsor
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1386</x>
+      <x>1008</x>
       <y>931</y>
       <w>329</w>
       <h>126</h>
@@ -1343,7 +748,7 @@ ComercialBanner
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1995</x>
+      <x>1617</x>
       <y>574</y>
       <w>231</w>
       <h>63</h>
@@ -1358,7 +763,7 @@ Auditor
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1743</x>
+      <x>1365</x>
       <y>448</y>
       <w>329</w>
       <h>140</h>
@@ -1369,7 +774,7 @@ Auditor
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2198</x>
+      <x>1820</x>
       <y>630</y>
       <w>35</w>
       <h>210</h>
@@ -1382,7 +787,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2044</x>
+      <x>1666</x>
       <y>728</y>
       <w>35</w>
       <h>217</h>
@@ -1395,7 +800,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2289</x>
+      <x>1911</x>
       <y>910</y>
       <w>105</w>
       <h>119</h>
@@ -1408,7 +813,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1848</x>
+      <x>1470</x>
       <y>728</y>
       <w>35</w>
       <h>70</h>
@@ -1421,7 +826,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1785</x>
+      <x>1407</x>
       <y>903</y>
       <w>105</w>
       <h>140</h>
@@ -1434,7 +839,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2072</x>
+      <x>1694</x>
       <y>1057</y>
       <w>35</w>
       <h>91</h>
@@ -1447,7 +852,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1547</x>
+      <x>1169</x>
       <y>826</y>
       <w>35</w>
       <h>119</h>
@@ -1460,7 +865,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1323</x>
+      <x>945</x>
       <y>798</y>
       <w>147</w>
       <h>28</h>
@@ -1473,7 +878,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2072</x>
+      <x>1694</x>
       <y>357</y>
       <w>336</w>
       <h>56</h>
@@ -1488,7 +893,7 @@ Participation
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1974</x>
+      <x>1596</x>
       <y>406</y>
       <w>203</w>
       <h>105</h>
@@ -1501,7 +906,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2268</x>
+      <x>1890</x>
       <y>301</y>
       <w>35</w>
       <h>70</h>
@@ -1514,7 +919,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2401</x>
+      <x>2023</x>
       <y>266</y>
       <w>189</w>
       <h>56</h>
@@ -1527,7 +932,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1974</x>
+      <x>1596</x>
       <y>399</y>
       <w>588</w>
       <h>126</h>
@@ -1540,7 +945,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1974</x>
+      <x>1596</x>
       <y>280</y>
       <w>112</w>
       <h>217</h>
