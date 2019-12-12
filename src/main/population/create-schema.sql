@@ -28,6 +28,7 @@
         `version` integer not null,
         `moment` datetime(6),
         `qualifications` varchar(1024),
+        `reason` varchar(1024),
         `reference_number` varchar(255),
         `skills` varchar(255),
         `statement` varchar(255),

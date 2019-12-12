@@ -21,5 +21,10 @@ employer.application.form.label.skills = Skills:
 employer.application.form.label.qualifications = Qualification: 
 employer.application.form.label.job: Job:
 employer.application.form.label.worker: Worker:
+employer.application.form.label.statement = Statement:
 
+employer.application.form.button.status = Change Status
+employer.application.form.button.statement = Update and send statement
 employer.application.form.button.return = Return
+
+employer.application.error.statement = For rejected you need one statement

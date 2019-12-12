@@ -42,18 +42,6 @@ public class EmployerApplicationListMineService implements AbstractListService<E
 	public Collection<Application> findMany(final Request<Application> request) {
 		assert request != null;
 
-		//		Collection<Application> result = new HashSet<>();
-		//		Principal principal;
-		//		Collection<Application> application;
-		//		Collection<Job> jobs;
-		//
-		//		principal = request.getPrincipal();
-		//		jobs = this.jobRepository.findManyByEmployerId(principal.getActiveRoleId());
-		//		for (Job j : jobs) {
-		//			application = this.repository.findManyByJobId(j.getId());
-		//			result.addAll(application);
-		//		}
-
 		Collection<Application> result = new HashSet<>();
 		Collection<Application> application;
 		Principal principal;
