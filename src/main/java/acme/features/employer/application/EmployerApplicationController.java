@@ -23,11 +23,14 @@ public class EmployerApplicationController extends AbstractController<Employer, 
 	@Autowired
 	EmployerApplicationShowService		showService;
 
+	@Autowired
+	EmployerApplicationUpdateService	updateService;
+
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
 
 	}

@@ -1,5 +1,4 @@
-
-    create table `administrator` (
+  create table `administrator` (
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
@@ -28,8 +27,10 @@
         `version` integer not null,
         `moment` datetime(6),
         `qualifications` varchar(1024),
+        `reason` varchar(1024),
         `reference_number` varchar(255),
         `skills` varchar(255),
+        `statement` varchar(255),
         `status` varchar(255),
         `job_id` integer not null,
         `worker_id` integer not null,
@@ -175,6 +176,7 @@
         `salary_currency` varchar(255),
         `status` bit not null,
         `title` varchar(255),
+        `auditor_id` integer not null,
         `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -264,6 +266,12 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `thread_authenticated` (
+       `thread_id` integer not null,
+        `authenticated_id` integer not null
+    ) engine=InnoDB;
+
+
     create table `thread_message` (
        `thread_id` integer not null,
         `messages_id` integer not null
@@ -301,7 +309,6 @@ create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
        add constraint UK_rf84q38qr35ymh5nn0dcxfdue unique (`reference_number`);
 create index IDX5moeha500qc8gc2o08r23r0u3 on `company_record` (`star`);
 create index IDXj49047yahjjtbpt7ttxtuc5k7 on `investor_record` (`star`);
-create index IDX28ur9xm72oo1df9g14xhnh8h3 on `job` (`status`);
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
@@ -383,6 +390,11 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
        references `user_account` (`id`);
 
     alter table `job` 
+       add constraint `FK15emyu82ye1j9lfl1wpo1i1ee` 
+       foreign key (`auditor_id`) 
+       references `auditor` (`id`);
+
+    alter table `job` 
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
        foreign key (`employer_id`) 
        references `employer` (`id`);
@@ -406,6 +418,16 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
        add constraint FK_20xk0ev32hlg96kqynl6laie2 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `thread_authenticated` 
+       add constraint `FK3qnqdrafjae0b206n1u8mh06f` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
+
+    alter table `thread_authenticated` 
+       add constraint `FKjsja3s5mr66x5nxm9dd8kut3r` 
+       foreign key (`thread_id`) 
+       references `thread` (`id`);
 
     alter table `thread_message` 
        add constraint `FKrjegm8cujrxgbce9n1b78xuyo` 

@@ -284,6 +284,7 @@
 		<property name="referenceNumber" value="EMP1-JOB1:W101" />
 		<property name= "moment" value= "2019/11/18 10:00"/>
 		<property name="status" value="accepted" />
+		<property name="statement" value="" />
 		<property name="skills" value="Mu bueno" />
 		<property name="qualifications" value="Universidad de la vida" />
 		<property name="job" ref="job1" />
@@ -293,6 +294,7 @@
 		<property name="referenceNumber" value="EMP1-JOB1:W102" />
 		<property name= "moment" value= "2019/11/18 10:00"/>
 		<property name="status" value="rejected" />
+		<property name="statement" value="" />
 		<property name="skills" value="Mu bueno" />
 		<property name="qualifications" value="Universidad de Sevilla" />
 		<property name="job" ref="job1" />
@@ -302,6 +304,7 @@
 		<property name="referenceNumber" value="EMP1-JOB2:W201" />
 		<property name= "moment" value= "2019/11/18 10:00"/>
 		<property name="status" value="rejected" />
+		<property name="statement" value="" />
 		<property name="skills" value="Mu bueno" />
 		<property name="qualifications" value="Universidad de Sevilla" />
 		<property name="job" ref="job2" />
@@ -322,7 +325,7 @@
 	<bean name="job3" class="acme.entities.jobs.Job">
 		<property name="reference" value="EMP3-JOB3" />
 		<property name="title" value="Title 3" />
-		<property name="deadline" value="2020/12/12 00:00" />
+		<property name="deadline" value="2019/07/12 00:00" />
 		<property name="salary" value="€ 400" />
 		<property name="description" value="This is a 1st example" />
 		<property name="moreInfo" value="http://www.examplesecond.com" />
@@ -518,6 +521,11 @@
 				<ref bean="message4" />
 			</list>
 		</property>
+		<property name="authenticated">
+			<list>
+				<ref bean="employer1Authenticated" />
+			</list>
+		</property>
 	</bean>
 	
 	<bean name="thread02" class="acme.entities.threads.Thread">
@@ -528,6 +536,11 @@
 				<ref bean="message1" />
 				<ref bean="message2" />
 				<ref bean="message3" />
+			</list>
+		</property>
+		<property name="authenticated">
+			<list>
+				<ref bean="employer1Authenticated" />
 			</list>
 		</property>
 		</bean>

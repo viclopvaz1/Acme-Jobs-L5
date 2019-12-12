@@ -1,5 +1,4 @@
-
-    alter table `administrator` 
+   alter table `administrator` 
        drop 
        foreign key FK_2a5vcjo3stlfcwadosjfq49l1;
 
@@ -49,6 +48,10 @@
 
     alter table `job` 
        drop 
+       foreign key `FK15emyu82ye1j9lfl1wpo1i1ee`;
+
+    alter table `job` 
+       drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
     alter table `message` 
@@ -66,6 +69,14 @@
     alter table `sponsor` 
        drop 
        foreign key FK_20xk0ev32hlg96kqynl6laie2;
+
+    alter table `thread_authenticated` 
+       drop 
+       foreign key `FK3qnqdrafjae0b206n1u8mh06f`;
+
+    alter table `thread_authenticated` 
+       drop 
+       foreign key `FKjsja3s5mr66x5nxm9dd8kut3r`;
 
     alter table `thread_message` 
        drop 
@@ -128,6 +139,8 @@
     drop table if exists `sponsor`;
 
     drop table if exists `thread`;
+
+    drop table if exists `thread_authenticated`;
 
     drop table if exists `thread_message`;
 

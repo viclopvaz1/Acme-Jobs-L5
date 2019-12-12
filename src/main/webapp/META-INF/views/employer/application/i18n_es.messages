@@ -10,6 +10,9 @@
 
 employer.application.list.label.referenceNumber = Numero de Referencia
 employer.application.list.label.moment = Momento
+employer.application.list.label.status = Estado
+employer.application.list.label.skills = Habilidades:
+employer.application.list.label.qualifications = Cualificacion
 
 employer.application.form.label.referenceNumber = Numero de Referencia: 
 employer.application.form.label.moment = Momento: 
@@ -18,5 +21,9 @@ employer.application.form.label.skills = Habilidades:
 employer.application.form.label.qualifications = Cualificacion: 
 employer.application.form.label.job: Trabajo:
 employer.application.form.label.worker = Trabajador:
+employer.application.form.label.statement = Justificación:
 
+employer.application.form.button.status = Cambiar estado
+employer.application.form.button.statement = Actualizar y mandar justificación
 employer.application.form.button.return = Return
+employer.application.error.statement = Para rechazar necesitas una justificación

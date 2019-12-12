@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
-import acme.entities.jobs.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -35,7 +34,7 @@ public class EmployerApplicationListMineService implements AbstractListService<E
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "referenceNumber", "moment");
+		request.unbind(entity, model, "referenceNumber", "moment", "status", "qualifications", "skills");
 
 	}
 
@@ -43,30 +42,13 @@ public class EmployerApplicationListMineService implements AbstractListService<E
 	public Collection<Application> findMany(final Request<Application> request) {
 		assert request != null;
 
-		//		Collection<Application> result = new HashSet<>();
-		//		Principal principal;
-		//		Collection<Application> application;
-		//		Collection<Job> jobs;
-		//
-		//		principal = request.getPrincipal();
-		//		jobs = this.jobRepository.findManyByEmployerId(principal.getActiveRoleId());
-		//		for (Job j : jobs) {
-		//			application = this.repository.findManyByJobId(j.getId());
-		//			result.addAll(application);
-		//		}
-
 		Collection<Application> result = new HashSet<>();
 		Collection<Application> application;
-		Collection<Job> job;
 		Principal principal;
 
 		principal = request.getPrincipal();
-		job = this.repository.findManyByEmployerId(principal.getActiveRoleId());
-		for (Job j : job) {
-			application = this.repository.findManyByJobId(j.getId());
-			result.addAll(application);
-		}
-
+		application = this.repository.findManyByEmployerId(principal.getActiveRoleId());
+		result.addAll(application);
 		return result;
 	}
 
