@@ -1,0 +1,16 @@
+authenticated.message.list.label.title = Título
+authenticated.message.list.label.body = Contenido
+authenticated.message.list.label.tags = Tags
+
+
+
+authenticated.message.form.label.moment = Fecha
+authenticated.message.form.label.title = Título
+
+authenticated.message.form.button.return = Volver
+authenticated.message.form.label.moment = Fecha mensaje
+authenticated.message.form.label.body = Cuerpo mensaje
+authenticated.message.form.label.title= Titulo del mensaje
+authenticated.message.form.label.user = Usuario 
+authenticated.message.form.label.messages = Mensajes
+authenticated.message.form.label.tags =Tags

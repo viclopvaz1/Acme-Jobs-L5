@@ -78,6 +78,8 @@ master.menu.administrator.list-non-comercial-banner = Lista non comercial banner
 # master.menu.worker   ########################################################
 master.menu.worker = Trabajador
 master.menu.worker.application.list-mine =  Lista de sus Solicitudes
+master.menu.worker.job.list = Lista de trabajos
+
 
 # master.menu.provider ########################################################
 

@@ -30,6 +30,7 @@
         `qualifications` varchar(1024),
         `reference_number` varchar(255),
         `skills` varchar(255),
+        `statement` varchar(255),
         `status` varchar(255),
         `job_id` integer not null,
         `worker_id` integer not null,
@@ -265,6 +266,11 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `thread_authenticated` (
+       `thread_id` integer not null,
+        `authenticated_id` integer not null
+    ) engine=InnoDB;
+
     create table `thread_message` (
        `thread_id` integer not null,
         `messages_id` integer not null
@@ -411,6 +417,16 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
        add constraint FK_20xk0ev32hlg96kqynl6laie2 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `thread_authenticated` 
+       add constraint `FK3qnqdrafjae0b206n1u8mh06f` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
+
+    alter table `thread_authenticated` 
+       add constraint `FKjsja3s5mr66x5nxm9dd8kut3r` 
+       foreign key (`thread_id`) 
+       references `thread` (`id`);
 
     alter table `thread_message` 
        add constraint `FKrjegm8cujrxgbce9n1b78xuyo` 

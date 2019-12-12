@@ -4,6 +4,7 @@ authenticated.thread.form.label.title = Title
 authenticated.thread.form.label.moment = Date
 
 authenticated.thread.form.button.return = Return
+authenticated.thread.form.button.message = Messages
 
 authenticated.thread.form.label.messages.moment = Messages moment
 authenticated.thread.form.label.messages.body = Body
