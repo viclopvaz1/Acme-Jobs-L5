@@ -43,7 +43,7 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "referenceNumber", "moment", "statement");
+		request.bind(entity, errors, "referenceNumber", "moment", "statement", "reason");
 		request.bind(entity, errors, "status", "skills", "qualifications", "job.reference", "worker.identity.fullName");
 
 	}
@@ -55,7 +55,7 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "referenceNumber", "moment", "statement");
+		request.unbind(entity, model, "referenceNumber", "moment", "statement", "reason");
 		request.unbind(entity, model, "status", "skills", "qualifications", "job.reference", "worker.identity.fullName");
 
 		//		if (request.isMethod(HttpMethod.GET)) {
@@ -85,8 +85,8 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 		assert entity != null;
 		assert errors != null;
 
-		if (!errors.hasErrors("statement")) {
-			errors.state(request, entity.getStatement() != null && entity.getStatement() != "" || !entity.getStatus().equals("rejected"), "statement", "employer.application.error.statement");
+		if (!errors.hasErrors("reason")) {
+			errors.state(request, entity.getReason() != null && entity.getReason() != "" || !entity.getStatus().equals("rejected"), "reason", "employer.application.error.reason");
 
 		}
 
