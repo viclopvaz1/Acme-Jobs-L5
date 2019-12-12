@@ -25,7 +25,6 @@
 	<acme:form-textarea code="auditor.job.form.label.description" path="description"/>
 	<acme:form-url code="auditor.job.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textbox code="auditor.job.form.label.employer" path="employer.identity.fullName" />	
-	<acme:form-textbox code="auditor.job.form.label.auditor" path="auditor.identity.fullName" />
 	
 	<acme:form-submit code="auditor.job.form.button.audit-record" action="/authenticated/audit-record/list-mine?jobid=${id}"  method="get"/>
 	<acme:form-submit code="auditor.job.form.button.duty" action="/authenticated/duty/list-mine?jobid=${id}"  method="get"/>

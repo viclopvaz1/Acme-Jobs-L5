@@ -13,5 +13,5 @@ who have enroled the Design and Testing subject of the Software Engineering curr
 University of Sevilla.  This project provides a template our students can use to get their projects 
 up and running very quickly.
 
-- Error1: We search a error in AuthenticatedAnnouncement, where the filter with calendar isn't applied.
+- Error1: Se ha añadido el índice en job en status.
 

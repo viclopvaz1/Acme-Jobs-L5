@@ -23,12 +23,27 @@ public class AuthenticatedDutyController extends AbstractController<Authenticate
 	@Autowired
 	AuthenticatedDutyShowService		showService;
 
+	@Autowired
+	AuthenticatedDutyCreateService		createService;
+
+	@Autowired
+	AuthenticatedDutyUpdateService		updateService;
+
+	@Autowired
+	AuthenticatedDutyDeleteService		deleteService;
+
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
+
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 
 	}
 

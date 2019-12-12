@@ -15,4 +15,9 @@ authenticated.duty.form.label.percentage = Percentage:
 authenticated.duty.list.label.title = Title
 authenticated.duty.list.label.percentage = Percentage
 
+authenticated.duty.form.button.create = Create
+authenticated.duty.form.button.update = Update
 authenticated.duty.form.button.return = Return
+authenticated.duty.form.button.delete = Delete
+
+authenticated.duty.form.error.percentage = The percentage must be greater than 0

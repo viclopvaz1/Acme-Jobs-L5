@@ -84,6 +84,7 @@ master.menu.provider.create-request = Create Request
 
 master.menu.employer = Employer
 master.menu.employer.list-mine-job = List Jobs
+master.menu.employer.create-job = Create Job
 master.menu.employer.list-mine-application = List Applications
 
 # master.menu.auditor ########################################################

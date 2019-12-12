@@ -18,10 +18,21 @@ employer.job.form.label.deadline = Caducidad:
 employer.job.form.label.salary = Salario: 
 employer.job.form.label.description = Descripción: 
 employer.job.form.label.moreInfo = Más información: 
+employer.job.form.label.status = Estado:
 employer.job.form.label.employer = Empleador:
-employer.job.form.label.auditor = Auditor:
+
 employer.job.form.button.audit-record = Records de Auditores
+
+employer.job.form.button.create = Crear
+employer.job.form.button.update = Actualizar
+employer.job.form.button.delete = Borrar
 employer.job.form.button.duty = Responsabilidades 
+employer.job.form.button.create-duty = Crear Responsabilidad
 employer.job.form.button.return = Volver
 
-employer.job.form.placeolder.reference = Recomendado el formato: EMP1-JOB1
+employer.job.form.placeholder.reference = Recomendado el formato: EMP1-JOB1
+
+employer.job.form.error.zoneEurS = Solo se permite la moneda euro, EUR o €
+employer.job.form.error.sumDuty = La suma de los porcentajes de las Responsabilidades deben suma 1
+employer.job.form.error.reference = Referencia existente, pruebe con otra
+employer.job.form.error.delete = No se puede eliminar un Trabajo si tiene Solicitudes

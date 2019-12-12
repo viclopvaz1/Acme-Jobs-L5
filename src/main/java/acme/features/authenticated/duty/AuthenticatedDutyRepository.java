@@ -18,4 +18,7 @@ public interface AuthenticatedDutyRepository extends AbstractRepository {
 	@Query("select d from Duty d where d.job.id = ?1")
 	Collection<Duty> findManyByJobId(int jobId);
 
+	@Query("select sum(d.percentage) from Duty d where d.job.id = ?1")
+	Double sumDutiesJob(int idJob);
+
 }

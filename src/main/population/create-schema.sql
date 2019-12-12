@@ -1,5 +1,4 @@
-
-    create table `administrator` (
+  create table `administrator` (
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
