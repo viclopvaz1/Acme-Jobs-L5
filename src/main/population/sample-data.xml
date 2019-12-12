@@ -283,8 +283,8 @@
 	<bean name="application1" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EMP1-JOB1:W101" />
 		<property name= "moment" value= "2019/11/18 10:00"/>
-		<property name="status" value="accepted" />
-		<property name="statement" value="" />
+		<property name="status" value="pending" />
+		<property name="statement" value="afs" />
 		<property name="skills" value="Mu bueno" />
 		<property name="qualifications" value="Universidad de la vida" />
 		<property name="job" ref="job1" />
@@ -293,8 +293,8 @@
 	<bean name="application2" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EMP1-JOB1:W102" />
 		<property name= "moment" value= "2019/11/18 10:00"/>
-		<property name="status" value="rejected" />
-		<property name="statement" value="" />
+		<property name="status" value="pending" />
+		<property name="statement" value="gdsgd" />
 		<property name="skills" value="Mu bueno" />
 		<property name="qualifications" value="Universidad de Sevilla" />
 		<property name="job" ref="job1" />
@@ -303,8 +303,8 @@
 	<bean name="application3" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EMP1-JOB2:W201" />
 		<property name= "moment" value= "2019/11/18 10:00"/>
-		<property name="status" value="rejected" />
-		<property name="statement" value="" />
+		<property name="status" value="pending" />
+		<property name="statement" value="httr" />
 		<property name="skills" value="Mu bueno" />
 		<property name="qualifications" value="Universidad de Sevilla" />
 		<property name="job" ref="job2" />
