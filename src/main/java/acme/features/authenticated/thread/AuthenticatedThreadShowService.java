@@ -1,14 +1,11 @@
 
 package acme.features.authenticated.thread;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.messages.Message;
 import acme.entities.threads.Thread;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -30,14 +27,14 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 
 		boolean result;
 		int threadId;
-		acme.entities.threads.Thread thread;
+		Thread thread;
 		Principal principal;
 
 		threadId = request.getModel().getInteger("id");
 		thread = this.repository.findOneThreadById(threadId);
-		List<Integer> users = thread.getMessages().stream().map(m -> m.getUser()).map(u -> u.getUserAccount().getId()).collect(Collectors.toList());
+		List<Authenticated> users = (List<Authenticated>) thread.getAuthenticated();
 		principal = request.getPrincipal();
-		result = users.contains(principal.getAccountId());
+		result = users.stream().filter(x -> x.getUserAccount().getId() == principal.getAccountId()).count() > 0;
 		return result;
 	}
 
@@ -46,9 +43,7 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		Collection<Message> messagesCollection = entity.getMessages();
 		request.unbind(entity, model, "title", "moment");
-		model.setAttribute("messagesCollection", messagesCollection);
 	}
 
 	@Override
@@ -56,12 +51,11 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 		// TODO Auto-generated method stub
 		assert request != null;
 
-		acme.entities.threads.Thread result;
+		Thread result;
 		int id;
 
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneThreadById(id);
-		result.getMessages().size();
 
 		return result;
 	}

@@ -42,6 +42,9 @@ public class Application extends DomainEntity {
 	private String				status;
 
 	@NotBlank
+	private String				statement;
+
+	@NotBlank
 	private String				skills;
 
 	@Column(length = 1024)

@@ -11,6 +11,8 @@
 employer.application.list.label.referenceNumber = Numero de Referencia
 employer.application.list.label.moment = Momento
 employer.application.list.label.status = Estado
+employer.application.list.label.skills = Habilidades:
+employer.application.list.label.qualifications = Cualificacion
 
 employer.application.form.label.referenceNumber = Numero de Referencia: 
 employer.application.form.label.moment = Momento: 

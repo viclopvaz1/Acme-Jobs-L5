@@ -71,6 +71,14 @@
        drop 
        foreign key FK_20xk0ev32hlg96kqynl6laie2;
 
+    alter table `thread_authenticated` 
+       drop 
+       foreign key `FK3qnqdrafjae0b206n1u8mh06f`;
+
+    alter table `thread_authenticated` 
+       drop 
+       foreign key `FKjsja3s5mr66x5nxm9dd8kut3r`;
+
     alter table `thread_message` 
        drop 
        foreign key `FKrjegm8cujrxgbce9n1b78xuyo`;
@@ -132,6 +140,8 @@
     drop table if exists `sponsor`;
 
     drop table if exists `thread`;
+
+    drop table if exists `thread_authenticated`;
 
     drop table if exists `thread_message`;
 
