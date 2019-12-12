@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-worker.application.label.referenceNumber = Numero de referencia:
+worker.application.form.label.referenceNumber = Numero de referencia:
 worker.application.label.moment = Fecha:
 worker.application.label.status = Estado:
 worker.application.label.skills = Habilidades:
@@ -19,3 +19,9 @@ worker.application.form.button.return = Volver
 
 worker.application.list.label.status = Estado
 worker.application.list.label.qualifications = Cualificaciones
+
+
+worker.application.form.label.skills = Skills:
+worker.application.form.label.qualifications = Titulaciones:
+worker.application.form.label.statement = Informe:
+worker.application.form.button.createApplication = Solicitar
