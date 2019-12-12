@@ -18,14 +18,17 @@
 <acme:form>
 
 	<acme:form-textbox code="employer.job.form.label.reference" 
-		placeholder="employer.job.form.placeolder.reference" path="reference"/>
+		placeholder="EEEE-JJJJ" path="reference"/>
 	<acme:form-textbox code="employer.job.form.label.title" path="title"/>
 	<acme:form-moment code="employer.job.form.label.deadline" path="deadline"/>
 	<acme:form-money code="employer.job.form.label.salary" path="salary"/>
 	<acme:form-textarea code="employer.job.form.label.description" path="description"/>
 	<acme:form-url code="employer.job.form.label.moreInfo" path="moreInfo"/>
-	<acme:form-textbox code="employer.job.form.label.employer" path="employer.identity.fullName" />	
-	<acme:form-textbox code="employer.job.form.label.auditor" path="auditor.identity.fullName" />
+	<jstl:if test="${command != 'create'}">
+		<acme:form-textbox code="employer.job.form.label.status" path="status"/>
+	    <acme:form-textbox code="employer.job.form.label.employer" path="employer.identity.fullName" />	
+	</jstl:if>
+
 	
 	<acme:form-submit test="${command == 'show' }"
 		code="employer.job.form.button.update" 
@@ -33,7 +36,7 @@
 	<acme:form-submit test="${command == 'show' }"
 		code="employer.job.form.button.delete" 
 		action="/employer/job/delete"/>
-	<acme:form-submit test="${command == 'create' }"
+	<acme:form-submit test="${command == 'create'}"
 		code="employer.job.form.button.create" 
 		action="/employer/job/create"/>
 	<acme:form-submit test="${command == 'update' }"
@@ -46,5 +49,6 @@
 	
 	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.audit-record" action="/authenticated/audit-record/list-mine?jobid=${id}"  method="get"/>
 	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.duty" action="/authenticated/duty/list-mine?jobid=${id}"  method="get"/>
+	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.create-duty" action="/authenticated/duty/create?jobid=${id}" method="get"/>
   	<acme:form-return code="employer.job.form.button.return"/>
 </acme:form>

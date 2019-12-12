@@ -49,10 +49,6 @@
 
     alter table `job` 
        drop 
-       foreign key `FK15emyu82ye1j9lfl1wpo1i1ee`;
-
-    alter table `job` 
-       drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
     alter table `message` 

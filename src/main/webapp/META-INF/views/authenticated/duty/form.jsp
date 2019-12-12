@@ -19,7 +19,28 @@
 
 	<acme:form-textbox code="authenticated.duty.form.label.title" path="title"/>
 	<acme:form-textarea code="authenticated.duty.form.label.description" path="description"/>
-	<acme:form-double code="authenticated.duty.form.label.percentage" path="percentage"/>
+	<acme:form-double code="authenticated.duty.form.label.percentage" path="percentage"/>	
+	<acme:form-hidden path="jobid"/>
 
-	<<acme:form-return code="authenticated.duty.form.button.return"/>
+	<acme:form-submit test="${command == 'show' }"
+		code="authenticated.duty.form.button.update" 
+		action="/authenticated/duty/update"/>
+		
+	<acme:form-submit test="${command == 'show' }"
+		code="authenticated.duty.form.button.delete" 
+		action="/authenticated/duty/delete"/>
+		
+	<acme:form-submit test="${command == 'create' }"
+		code="authenticated.duty.form.button.create" 
+		action="/authenticated/duty/create"/>
+		
+	<acme:form-submit test="${command == 'update' }"
+		code="authenticated.duty.form.button.update" 
+		action="/authenticated/duty/update"/>
+		
+	<acme:form-submit test="${command == 'delete' }"
+		code="authenticated.duty.form.button.delete" 
+		action="/authenticated/duty/delete"/>
+		
+	<acme:form-return code="authenticated.duty.form.button.return"/>
 </acme:form> 

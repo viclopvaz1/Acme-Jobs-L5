@@ -1,11 +1,17 @@
 
 package acme.features.employer.job;
 
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.jobs.Job;
 import acme.entities.roles.Employer;
+import acme.features.authenticated.duty.AuthenticatedDutyRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -15,7 +21,10 @@ import acme.framework.services.AbstractUpdateService;
 public class EmployerJobUpdateService implements AbstractUpdateService<Employer, Job> {
 
 	@Autowired
-	EmployerJobRepository repository;
+	EmployerJobRepository		repository;
+
+	@Autowired
+	AuthenticatedDutyRepository	dutyRepository;
 
 
 	@Override
@@ -63,6 +72,33 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		assert entity != null;
 		assert errors != null;
 
+		Double sumDuties;
+		int id;
+		Collection<String> references;
+		Calendar calendar;
+		Date minimunDeadline;
+
+		if (!errors.hasErrors("deadline")) {
+			calendar = new GregorianCalendar();
+			calendar.add(Calendar.DAY_OF_MONTH, 7);
+			minimunDeadline = calendar.getTime();
+			errors.state(request, entity.getDeadline().after(minimunDeadline), "deadline", "employer.job.form.error.tooClose");
+		}
+
+		if (!errors.hasErrors("salary")) {
+			errors.state(request, entity.getSalary().getCurrency().equals("EUR") || entity.getSalary().getCurrency().equals("€"), "salary", "employer.job.form.error.zoneEurS");
+		}
+
+		if (!errors.hasErrors("reference")) {
+			id = request.getModel().getInteger("id");
+			sumDuties = this.dutyRepository.sumDutiesJob(id);
+			errors.state(request, sumDuties == 1.00, "reference", "employer.job.form.error.sumDuty");
+		}
+
+		if (!errors.hasErrors("reference")) {
+			references = this.repository.allReferences();
+			errors.state(request, !references.contains(entity.getReference()), "reference", "employer.job.form.error.reference");
+		}
 	}
 
 	@Override

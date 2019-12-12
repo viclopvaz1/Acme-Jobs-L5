@@ -10,9 +10,10 @@ import acme.framework.repositories.AbstractRepository;
 
 public interface AuthenticatedJobRepository extends AbstractRepository {
 
-	@Query("select a from Job a where status = 1")
+	@Query("select j from Job j where j.status = 1")
 	Collection<Job> findMany();
-	@Query("select o from Job o where o.id = ?1")
+
+	@Query("select j from Job j where j.id = ?1")
 	Job findOneById(int id);
 
 }

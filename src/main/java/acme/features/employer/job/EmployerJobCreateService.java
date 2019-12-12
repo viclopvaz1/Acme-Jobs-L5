@@ -2,6 +2,7 @@
 package acme.features.employer.job;
 
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -36,7 +37,7 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "employer", "auditor");
+		request.bind(entity, errors, "status", "employer");
 
 	}
 
@@ -46,16 +47,25 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "reference", "deadline", "salary", "title", "description", "moreInfo", "status");
-
+		request.unbind(entity, model, "reference", "deadline", "salary", "title", "description", "moreInfo");
 	}
 
 	@Override
 	public Job instantiate(final Request<Job> request) {
+
 		Job result;
 
 		result = new Job();
 
+		Principal principal;
+		Employer employer;
+		int userAccountId;
+
+		principal = request.getPrincipal();
+		userAccountId = principal.getActiveRoleId();
+		employer = this.repository.findEmployerById(userAccountId);
+		result.setEmployer(employer);
+		result.setStatus(false);
 		return result;
 	}
 
@@ -67,12 +77,22 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 
 		Calendar calendar;
 		Date minimunDeadline;
+		Collection<String> references;
 
 		if (!errors.hasErrors("deadline")) {
 			calendar = new GregorianCalendar();
 			calendar.add(Calendar.DAY_OF_MONTH, 7);
 			minimunDeadline = calendar.getTime();
-			errors.state(request, entity.getDeadline().after(minimunDeadline), "deadline", "administrator.challenge.form.error.tooClose");
+			errors.state(request, entity.getDeadline().after(minimunDeadline), "deadline", "employer.job.form.error.tooClose");
+		}
+
+		if (!errors.hasErrors("salary")) {
+			errors.state(request, entity.getSalary().getCurrency().equals("EUR") || entity.getSalary().getCurrency().equals("€"), "salary", "employer.job.form.error.zoneEurS");
+		}
+
+		if (!errors.hasErrors("reference")) {
+			references = this.repository.allReferences();
+			errors.state(request, !references.contains(entity.getReference()), "reference", "employer.job.form.error.reference");
 		}
 
 	}
@@ -80,12 +100,6 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 	@Override
 	public void create(final Request<Job> request, final Job entity) {
 
-		Principal principal;
-		principal = request.getPrincipal();
-		System.out.println(principal.getActiveRole());
-		System.out.println(principal.getActiveRole().getName());
-		System.out.println(principal.getActiveRole().getFields());
-		//		entity.setEmployer(principal.getActiveRole());
 		this.repository.save(entity);
 
 	}

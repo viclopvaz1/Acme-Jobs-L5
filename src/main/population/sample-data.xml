@@ -270,7 +270,6 @@
 		<property name="moreInfo" value="http://www.exampleone.com" />
 		<property name="status" value="true" />
 		<property name="employer" ref="employer1Employer" />
-		<property name="auditor" ref="auditor1auditor" />
 	</bean>
 	
 	
@@ -318,7 +317,6 @@
 		<property name="moreInfo" value="http://www.examplesecond.com" />
 		<property name="status" value="true" />
 		<property name="employer" ref="employer1Employer" />
-		<property name="auditor" ref="auditor2auditor" />
 	</bean>
 	
 	<bean name="job3" class="acme.entities.jobs.Job">
@@ -330,7 +328,6 @@
 		<property name="moreInfo" value="http://www.examplesecond.com" />
 		<property name="status" value="true" />
 		<property name="employer" ref="employer2Employer" />
-		<property name="auditor" ref="auditor2auditor" />
 	</bean>
 	
 	<bean name="worker1UserAccount" class="acme.framework.entities.UserAccount">

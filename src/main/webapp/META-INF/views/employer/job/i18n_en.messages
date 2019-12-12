@@ -21,13 +21,20 @@ employer.job.form.label.moreInfo = More Info:
 employer.job.form.label.employer = Employer:
 employer.job.form.label.auditor = Auditor:
 employer.job.form.label.employer = Employer:
-employer.job.form.label.auditor = Auditor:
+employer.job.form.label.status = Status:
+
 employer.job.form.button.audit-record = Audits Records 
 
 employer.job.form.button.create = Create
 employer.job.form.button.update = Update
 employer.job.form.button.delete = Delete
 employer.job.form.button.duty = Duties 
+employer.job.form.button.create-duty = Create Duty
 employer.job.form.button.return = Return
 
-employer.job.form.placeolder.reference = Recomended the format: EMP1-JOB1
+employer.job.form.placeholder.reference = Recomended the format: EMP1-JOB1
+
+employer.job.form.error.zoneEurS = Only the euro, EUR or € currency is allowed
+employer.job.form.error.sumDuty = The sum of the percentages of the Duties must sum 1
+employer.job.form.error.reference = Existing reference, try another
+employer.job.form.error.delete = You cannot delete a Job if you have Applications
