@@ -38,3 +38,5 @@ employer.job.form.error.zoneEurS = Only the euro, EUR or € currency is allowed
 employer.job.form.error.sumDuty = The sum of the percentages of the Duties must sum 1
 employer.job.form.error.reference = Existing reference, try another
 employer.job.form.error.delete = You cannot delete a Job if you have Applications
+employer.job.form.error.spamWordsTitle = The title contains Spam Words
+employer.job.form.error.spamWordsDescription = The description contains Spam Words

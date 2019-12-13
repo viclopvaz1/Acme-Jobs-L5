@@ -1,4 +1,5 @@
-   alter table `administrator` 
+
+    alter table `administrator` 
        drop 
        foreign key FK_2a5vcjo3stlfcwadosjfq49l1;
 
@@ -45,10 +46,6 @@
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
-
-    alter table `job` 
-       drop 
-       foreign key `FK15emyu82ye1j9lfl1wpo1i1ee`;
 
     alter table `job` 
        drop 

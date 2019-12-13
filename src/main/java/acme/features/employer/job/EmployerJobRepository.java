@@ -25,4 +25,6 @@ public interface EmployerJobRepository extends AbstractRepository {
 	@Query("select j.reference from Job j")
 	Collection<String> allReferences();
 
+	@Query("select c.spamWords from Configuration c")
+	String spamWords();
 }
