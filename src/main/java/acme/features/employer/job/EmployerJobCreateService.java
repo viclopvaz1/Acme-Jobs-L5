@@ -109,19 +109,27 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 		if (!errors.hasErrors("title")) {
 			boolean isSpam = false;
 			for (String s : spam) {
-				isSpam = entity.getTitle().contains(s);
+				if (entity.getTitle().toLowerCase().contains(s.toLowerCase())) {
+					isSpam = true;
+					break;
+
+				}
+
 			}
 
-			errors.state(request, isSpam, "title", "employer.job.form.error.spamWordsTitle");
+			errors.state(request, !isSpam, "title", "employer.job.form.error.spamWordsTitle");
 		}
 
 		if (!errors.hasErrors("description")) {
 			boolean isSpam = false;
 			for (String s : spam) {
-				isSpam = entity.getDescription().contains(s);
+				if (entity.getDescription().toLowerCase().contains(s.toLowerCase())) {
+					isSpam = true;
+					break;
+				}
 			}
 
-			errors.state(request, isSpam, "description", "employer.job.form.error.spamWordsDescription");
+			errors.state(request, !isSpam, "description", "employer.job.form.error.spamWordsDescription");
 		}
 
 	}
