@@ -1,3 +1,4 @@
+
 # i18n_es.messages
 #
 # Copyright (c) 2019 Rafael Corchuelo.
@@ -38,3 +39,4 @@ employer.job.form.error.reference = Referencia existente, pruebe con otra
 employer.job.form.error.delete = No se puede eliminar un Trabajo si tiene Solicitudes
 employer.job.form.error.spamWordsTitle = El titulo contiene palabras de Spam
 employer.job.form.error.spamWordsDescription = La descripcion contiene palabras de Spam
+employer.job.form.error.hasApplicationOrAuditRecord = El Trabajo tiene Solicitudes o Records de Auditores asociadas

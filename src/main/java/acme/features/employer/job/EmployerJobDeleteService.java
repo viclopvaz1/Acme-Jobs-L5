@@ -13,6 +13,7 @@ import acme.features.authenticated.duty.AuthenticatedDutyRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
@@ -70,9 +71,22 @@ public class EmployerJobDeleteService implements AbstractDeleteService<Employer,
 		assert entity != null;
 		assert errors != null;
 
-		//		if(!errors.hasErrors("reference")) {
-		//			errors.state(request, , "reference", "employer.job.form.error.delete");
-		//		}
+		Principal principal;
+		int employerId;
+		int totalApplications;
+		Job job;
+		int idJob;
+		int totalAuditRecords;
+
+		if (!errors.hasErrors("references")) {
+			principal = request.getPrincipal();
+			employerId = principal.getAccountId();
+			idJob = request.getModel().getInteger("id");
+			job = this.repository.findOneById(idJob);
+			totalApplications = this.repository.findTotalApplicationByEmployerId(employerId);
+			totalAuditRecords = this.repository.findAllAuditRecordByJobId(idJob);
+			errors.state(request, totalApplications == 0 && totalAuditRecords == 0, "reference", "employer.job.form.error.hasApplicationOrAuditRecord");
+		}
 
 	}
 

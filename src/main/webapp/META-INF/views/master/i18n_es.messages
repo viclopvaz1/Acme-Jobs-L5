@@ -109,7 +109,9 @@ master.menu.auditor.list-no-mine-job = Lista de No Trabajos de Auditores
 
 master.menu.sponsor = Patrocinador
 master.menu.sponsor.list-mine-comercial-banner = Lista de sus Banners Comerciales
+master.menu.sponsor.create-comercial-banner = Crear Banner Comercial
 master.menu.sponsor.list-mine-non-comercial-banner = Lista de sus Banners No Comerciales
+master.menu.sponsor.create-non-comercial-banner = Crear Banner No Comercial
 
 # master.menu.user-account ####################################################
 

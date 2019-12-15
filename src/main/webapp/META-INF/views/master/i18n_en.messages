@@ -97,7 +97,9 @@ master.menu.auditor.list-no-mine-job = List Auditor No Jobs
 
 master.menu.sponsor = Sponsor
 master.menu.sponsor.list-mine-comercial-banner = List Sponsor Comercial Banner
+master.menu.sponsor.create-comercial-banner = Create Comercial Banner
 master.menu.sponsor.list-mine-non-comercial-banner = List Sponsor Non Comercial Banner
+master.menu.sponsor.create-non-comercial-banner = Create Non Comercial Banner
 
 # master.menu.consumer ##########################################################
 

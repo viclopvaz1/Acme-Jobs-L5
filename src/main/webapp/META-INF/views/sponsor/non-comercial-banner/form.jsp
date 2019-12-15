@@ -21,7 +21,29 @@
 	<acme:form-textbox code="sponsor.non-comercial-banner.form.slogan" path="slogan"/>
 	<acme:form-url code="sponsor.non-comercial-banner.form.targetUrl" path="targetUrl"/>
 	<acme:form-url code="sponsor.non-comercial-banner.form.jingle" path="jingle"/>
-	<acme:form-textbox code="sponsor.non-comercial-banner.form.sponsor" path="sponsor.identity.fullName"/>
+	<jstl:if test="${command != 'create'}">
+		<acme:form-textbox code="sponsor.non-comercial-banner.form.sponsor" path="sponsor.identity.fullName"/>
+	</jstl:if>
+	
+	<acme:form-submit test="${command == 'show'}"  
+		code="sponsor.non-comercial-banner.form.button.update" 
+		action="/sponsor/non-comercial-banner/update"/>
+
+	<acme:form-submit test="${command == 'show'}"  
+		code="sponsor.non-comercial-banner.form.button.delete" 
+		action="/sponsor/non-comercial-banner/delete"/>
+
+	<acme:form-submit test="${command == 'create'}"  
+		code="sponsor.non-comercial-banner.form.button.create" 
+		action="/sponsor/non-comercial-banner/create"/>
+
+	<acme:form-submit test="${command == 'update'}"  
+		code="sponsor.non-comercial-banner.form.button.update" 
+		action="/sponsor/non-comercial-banner/update"/>
+
+	<acme:form-submit test="${command == 'delete'}"  
+		code="sponsor.non-comercial-banner.form.button.delete" 
+		action="/sponsor/non-comercial-banner/delete"/>
 
 
   	<acme:form-return code="sponsor.non-comercial-banner.form.button.return"/>
