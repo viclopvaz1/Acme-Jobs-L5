@@ -1,5 +1,3 @@
-
-
 # i18n_en.messages
 #
 # Copyright (c) 2019 Rafael Corchuelo.
@@ -92,6 +90,7 @@ master.menu.employer.list-mine-application = List Applications
 master.menu.auditor = Auditor
 master.menu.auditor.list-mine-job = List Auditor Jobs
 master.menu.auditor.list-no-mine-job = List Auditor No Jobs
+master.menu.auditor.list-mine-audit-record = List of audits records
 
 # master.menu.sponsor ########################################################
 
@@ -165,5 +164,4 @@ master.license.text = \
 	automatically for a maximum of 31 days, and "language" to store your language \
 	preferences. Additionally, we store an item called "returnStack" in your browser's \
 	local storage to keep track of the document to which some buttons must return.
-
 
