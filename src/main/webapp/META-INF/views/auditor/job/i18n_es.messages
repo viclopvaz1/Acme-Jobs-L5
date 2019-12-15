@@ -23,4 +23,7 @@ auditor.job.form.button.audit-record = Records de Auditores
 auditor.job.form.button.duty = Responsabilidades
 auditor.job.form.button.return = Volver
 
+auditor.job.form.button.create-audit-record = Crear records de auditores
+auditor.job.form.button.list.audit-record = Mis records de auditores
+
 auditor.job.form.placeolder.reference = Recomendado el formato: EMP1-JOB1

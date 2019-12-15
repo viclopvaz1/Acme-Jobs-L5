@@ -23,4 +23,8 @@ auditor.job.form.button.audit-record = Audits Records
 auditor.job.form.button.duty = Duties 
 auditor.job.form.button.return = Return
 
+auditor.job.form.button.create-audit-record = Create Audit Record
+auditor.job.form.button.list.audit-record = My Audits Record
+  	
+
 auditor.job.form.placeolder.reference = Recomended the format: EMP1-JOB1
