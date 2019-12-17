@@ -34,7 +34,7 @@ public class EmployerApplicationListMineService implements AbstractListService<E
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "referenceNumber", "moment", "status", "qualifications", "skills");
+		request.unbind(entity, model, "referenceNumber", "moment", "status", "qualifications", "skills", "statement");
 
 	}
 

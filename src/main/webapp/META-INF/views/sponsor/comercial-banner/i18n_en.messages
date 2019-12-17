@@ -21,4 +21,10 @@ sponsor.comercial-banner.label.picture = Picture
 sponsor.comercial-banner.label.slogan = Slogan
 
 sponsor.comercial-banner.form.button.return = Return
+sponsor.comercial-banner.form.button.create = Create
+sponsor.comercial-banner.form.button.update = Update
+sponsor.comercial-banner.form.button.delete = Delete
 
+sponsor.comercial-banner.form.error.monthExp = The Month Expire must be greater than or equal to the current month, if it is the same year.
+sponsor.comercial-banner.form.error.yearExp = The Year Month must be greater than or equal to the current year.
+sponsor.comercial-banner.form.error.spamWordsSlogan = The Slogan contains Spam Words

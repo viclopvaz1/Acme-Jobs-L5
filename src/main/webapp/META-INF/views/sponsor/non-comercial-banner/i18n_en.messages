@@ -18,3 +18,8 @@ sponsor.non-comercial-banner.label.picture = Picture
 sponsor.non-comercial-banner.label.slogan = Slogan
 
 sponsor.non-comercial-banner.form.button.return = Return
+sponsor.non-comercial-banner.form.button.create = Create
+sponsor.non-comercial-banner.form.button.update = Update
+sponsor.non-comercial-banner.form.button.delete = Delete
+
+sponsor.non-comercial-banner.form.error.spamWordsSlogan = The Slogan contains Spam Words

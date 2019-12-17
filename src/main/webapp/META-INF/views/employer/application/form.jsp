@@ -19,9 +19,9 @@
 	<jstl:if test="${command!='update'}">
 		<acme:form-textbox code="employer.application.form.label.referenceNumber" path="referenceNumber"/>
 		<acme:form-moment code="employer.application.form.label.moment" path="moment"/>
+		<acme:form-textarea code="employer.application.form.label.statement" path="statement" />
 		<acme:form-textbox code="employer.application.form.label.skills" path="skills"/>
 		<acme:form-textbox code="employer.application.form.label.qualifications" path="qualifications"/>
-		<acme:form-textbox code="employer.application.form.label.job" path="job.reference"/>
 		<acme:form-textbox code="employer.application.form.label.worker" path="worker.identity.fullName"/>
 	</jstl:if>
 	<acme:form-select code="employer.application.form.label.status" path="status">
