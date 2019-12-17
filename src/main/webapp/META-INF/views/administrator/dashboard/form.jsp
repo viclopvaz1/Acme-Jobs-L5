@@ -42,12 +42,31 @@
 <div>
 	<canvas id="canvas4"></canvas>
 </div>
+</br>
+<h2>
+	<acme:message code="administrator.dashboard.form.message5"/>
+</h2>
+<div>
+	<canvas id="canvas5"></canvas>
+</div>
 
+</br>
+<h2>
+	<acme:message code="administrator.dashboard.form.message6"/>
+</h2>
+<div>
+	<canvas id="canvas6"></canvas>
+</div>
 
+</br>
+<h2>
+	<acme:message code="administrator.dashboard.form.message7"/>
+</h2>
+<div>
+	<canvas id="canvas7"></canvas>
+</div>
 
-
-
-<script type="text/javascript">	
+<script type="text/javascript">
 	$(document).ready(function() {
 		var data = {
 			labels: [
@@ -269,3 +288,176 @@
 			
 	});
 </script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var data = {
+			labels: [
+				<jstl:forEach var="iterator" items="${Accepted}">
+					"<jstl:out value="${iterator[0]}"/>" ,
+				</jstl:forEach>
+			],
+			datasets: [
+				{
+					data: [
+						<jstl:forEach var="iterator" items="${Accepted}">
+							<jstl:out value="${iterator[1]}"/> ,
+						</jstl:forEach>
+					],
+					backgroundColor: [
+				          "#f38b4a",
+				          "#56d798",
+				          "#ff8397",
+				          "#6970d5" 
+				        ],
+				}
+			]
+		};
+		
+		
+		
+		var options = {
+			scales : {
+				yAxes:[
+					{
+						ticks : {
+							suggestedMin : 0.0,
+							suggestedMax : 1.0
+						}
+					}
+				]
+			},
+			legend : {
+				display : false
+			}
+		};
+		
+		var canvas, context;
+		
+		canvas = document.getElementById("canvas5");
+		context = canvas.getContext("2d");
+		new Chart(context, {
+			type: "pie",
+			data: data,
+			options: options
+		});
+		
+	});
+		
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var data = {
+			labels: [
+				<jstl:forEach var="iterator" items="${Pending}">
+					"<jstl:out value="${iterator[0]}"/>" ,
+				</jstl:forEach>
+			],
+			datasets: [
+				{
+					data: [
+						<jstl:forEach var="iterator" items="${Pending}">
+							<jstl:out value="${iterator[1]}"/> ,
+						</jstl:forEach>
+					],
+					backgroundColor: [
+				          "#f38b4a",
+				          "#56d798",
+				          "#ff8397",
+				          "#6970d5" 
+				        ],
+				}
+			]
+		};
+		
+		
+		
+		var options = {
+			scales : {
+				yAxes:[
+					{
+						ticks : {
+							suggestedMin : 0.0,
+							suggestedMax : 1.0
+						}
+					}
+				]
+			},
+			legend : {
+				display : false
+			}
+		};
+		
+		var canvas, context;
+		
+		canvas = document.getElementById("canvas6");
+		context = canvas.getContext("2d");
+		new Chart(context, {
+			type: "pie",
+			data: data,
+			options: options
+		});
+		
+	});
+		
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var data = {
+			labels: [
+				<jstl:forEach var="iterator" items="${Rejected}">
+					"<jstl:out value="${iterator[0]}"/>" ,
+				</jstl:forEach>
+			],
+			datasets: [
+				{
+					data: [
+						<jstl:forEach var="iterator" items="${Rejected}">
+							<jstl:out value="${iterator[1]}"/> ,
+						</jstl:forEach>
+					],
+					backgroundColor: [
+				          "#f38b4a",
+				          "#56d798",
+				          "#ff8397",
+				          "#6970d5" 
+				        ],
+				}
+			]
+		};
+		
+		
+		
+		var options = {
+			scales : {
+				yAxes:[
+					{
+						ticks : {
+							suggestedMin : 0.0,
+							suggestedMax : 1.0
+						}
+					}
+				]
+			},
+			legend : {
+				display : false
+			}
+		};
+		
+		var canvas, context;
+		
+		canvas = document.getElementById("canvas7");
+		context = canvas.getContext("2d");
+		new Chart(context, {
+			type: "pie",
+			data: data,
+			options: options
+		});
+		
+	});
+		
+</script>
+
+

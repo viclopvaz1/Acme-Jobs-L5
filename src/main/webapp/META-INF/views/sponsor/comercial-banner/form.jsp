@@ -23,9 +23,26 @@
 	<acme:form-textbox code="sponsor.comercial-banner.form.monthExp" path="monthExp"/>
 	<acme:form-textbox code="sponsor.comercial-banner.form.yearExp" path="yearExp"/>
 	<acme:form-textbox code="sponsor.comercial-banner.form.cvv" path="cvv"/>
-	<acme:form-textbox code="sponsor.comercial-banner.form.sponsor" path="sponsor.identity.fullName"/>
+	<jstl:if test="${command != 'create'}">
+		<acme:form-textbox code="sponsor.comercial-banner.form.sponsor" path="sponsor.identity.fullName"/>
+	</jstl:if>
 	
 
+	<acme:form-submit test="${command == 'show' }"
+		code="sponsor.comercial-banner.form.button.update" 
+		action="/sponsor/comercial-banner/update"/>
+	<acme:form-submit test="${command == 'show' }"
+		code="sponsor.comercial-banner.form.button.delete" 
+		action="/sponsor/comercial-banner/delete"/>
+	<acme:form-submit test="${command == 'create' }"
+		code="sponsor.comercial-banner.form.button.create" 
+		action="/sponsor/comercial-banner/create"/>
+	<acme:form-submit test="${command == 'update' }"
+		code="sponsor.comercial-banner.form.button.update" 
+		action="/sponsor/comercial-banner/update"/>
+	<acme:form-submit test="${command == 'delete' }"
+		code="sponsor.comercial-banner.form.button.delete" 
+		action="/sponsor/comercial-banner/delete"/>
 	
 	<acme:form-return code="sponsor.comercial-banner.form.button.return"/>
 </acme:form>

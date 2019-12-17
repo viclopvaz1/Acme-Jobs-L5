@@ -1,4 +1,5 @@
-  create table `administrator` (
+
+    create table `administrator` (
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
@@ -30,7 +31,7 @@
         `reason` varchar(1024),
         `reference_number` varchar(255),
         `skills` varchar(255),
-        `statement` varchar(255),
+        `statement` varchar(1024),
         `status` varchar(255),
         `job_id` integer not null,
         `worker_id` integer not null,
@@ -54,7 +55,16 @@
         `version` integer not null,
         `user_account_id` integer,
         `firm` varchar(255),
-        `responsibility_statement` varchar(255),
+        `responsability_statement` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `auditor_request` (
+       `id` integer not null,
+        `version` integer not null,
+        `firm` varchar(255),
+        `responsability_statement` varchar(255),
+        `authenticated_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -176,7 +186,6 @@
         `salary_currency` varchar(255),
         `status` bit not null,
         `title` varchar(255),
-        `auditor_id` integer not null,
         `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -271,7 +280,6 @@
         `authenticated_id` integer not null
     ) engine=InnoDB;
 
-
     create table `thread_message` (
        `thread_id` integer not null,
         `messages_id` integer not null
@@ -307,8 +315,13 @@ create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
 
     alter table `application` 
        add constraint UK_rf84q38qr35ymh5nn0dcxfdue unique (`reference_number`);
+
+    alter table `auditor_request` 
+       add constraint UK_thc46ns3ddg7rpxbnnbfsbrai unique (`authenticated_id`);
+       
 create index IDX5moeha500qc8gc2o08r23r0u3 on `company_record` (`star`);
 create index IDXj49047yahjjtbpt7ttxtuc5k7 on `investor_record` (`star`);
+create index IDX28ur9xm72oo1df9g14xhnh8h3 on `job` (`status`);
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
@@ -364,6 +377,11 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `auditor_request` 
+       add constraint `FKjonb5lt00rmb868h6gjdjh1to` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
+
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 
        foreign key (`user_account_id`) 
@@ -388,11 +406,6 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
        add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
-
-    alter table `job` 
-       add constraint `FK15emyu82ye1j9lfl1wpo1i1ee` 
-       foreign key (`auditor_id`) 
-       references `auditor` (`id`);
 
     alter table `job` 
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 

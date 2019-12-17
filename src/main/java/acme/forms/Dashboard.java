@@ -24,4 +24,11 @@ public class Dashboard implements Serializable {
 	Double						TotalJobs;
 
 	Double						TotalApplications;
+
+	Collection<Object[]>		Accepted;
+
+	Collection<Object[]>		Pending;
+
+	Collection<Object[]>		Rejected;
+
 }

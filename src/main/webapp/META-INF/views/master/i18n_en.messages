@@ -66,6 +66,11 @@ master.menu.administrator.comercial-banner = Create Comercial Banner
 
 master.menu.administrator.create-non-comercial-banner = Create non comercial banner
 master.menu.administrator.list-non-comercial-banner = List non comercial banner
+master.menu.administrator.list.auditor = List auditor request 
+
+# master.menu.auditor   ########################################################
+master.menu.user-account.become-auditor = Become an auditor
+master.menu.user-account.auditor =  Auditor data
 
 # master.menu.worker   ########################################################
 master.menu.worker = Worker
@@ -96,7 +101,9 @@ master.menu.auditor.list-mine-audit-record = List of audits records
 
 master.menu.sponsor = Sponsor
 master.menu.sponsor.list-mine-comercial-banner = List Sponsor Comercial Banner
+master.menu.sponsor.create-comercial-banner = Create Comercial Banner
 master.menu.sponsor.list-mine-non-comercial-banner = List Sponsor Non Comercial Banner
+master.menu.sponsor.create-non-comercial-banner = Create Non Comercial Banner
 
 # master.menu.consumer ##########################################################
 
@@ -115,6 +122,8 @@ master.menu.user-account.become-employer = Become a employer
 master.menu.user-account.employer = Employer data
 master.menu.user-account.become-worker = Become a worker
 master.menu.user-account.worker = Worker data
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.sponsor = Sponsor data
 
 
 
