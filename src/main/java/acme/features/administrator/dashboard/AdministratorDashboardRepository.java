@@ -2,6 +2,7 @@
 package acme.features.administrator.dashboard;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -28,5 +29,14 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 
 	@Query("select count(a) from Application a")
 	Double findTotalApplication();
+
+	@Query("select DAY(moment), count(a) from Application a where (a.status = 'accepted' and a.moment > ?1) group by DAY(a.moment)")
+	Collection<Object[]> findByAccepted(Date moment);
+
+	@Query("select DAY(moment), count(a) from Application a where (a.status = 'pending' and a.moment > ?1) group by DAY(a.moment)")
+	Collection<Object[]> findByPending(Date moment);
+
+	@Query("select DAY(moment), count(a) from Application a where (a.status = 'rejected' and a.moment > ?1) group by DAY(a.moment)")
+	Collection<Object[]> findByRejected(Date moment);
 
 }
