@@ -109,6 +109,7 @@ master.menu.employer.list-mine-application = Lista de Solicitudes
 master.menu.auditor = Auditores
 master.menu.auditor.list-mine-job = Lista de Trabajos de Auditores
 master.menu.auditor.list-no-mine-job = Lista de No Trabajos de Auditores
+master.menu.auditor.list-mine-audit-record = Lista de records de Auditores
 
 # master.menu.sponsor ########################################################
 
