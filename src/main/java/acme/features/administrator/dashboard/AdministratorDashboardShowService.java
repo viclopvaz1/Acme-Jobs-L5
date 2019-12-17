@@ -1,7 +1,10 @@
 
 package acme.features.administrator.dashboard;
 
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,7 +35,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "numberOfCompaniesGroupedBySector", "numberOfInvestorsGroupedBySector", "ratioOfJobsGroupedByStatus", "ratioOfApplicationsGroupedByStatus", "TotalJobs", "TotalApplications");
+		request.unbind(entity, model, "numberOfCompaniesGroupedBySector", "numberOfInvestorsGroupedBySector", "ratioOfJobsGroupedByStatus", "ratioOfApplicationsGroupedByStatus", "TotalJobs", "TotalApplications", "Accepted", "Pending", "Rejected");
 
 	}
 
@@ -40,12 +43,19 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 	public Dashboard findOne(final Request<Dashboard> request) {
 		assert request != null;
 
+		Calendar cal = new GregorianCalendar();
+		cal.add(Calendar.DAY_OF_MONTH, -28);
+		Date moment = cal.getTime();
+
 		Collection<Object[]> numberOfCompaniesGroupedBySector = this.repository.findBySector();
 		Collection<Object[]> numberOfInvestorsGroupedBySector = this.repository.findBySector2();
 		Collection<Object[]> gbs = this.repository.findByStatus();
 		Collection<Object[]> gbs2 = this.repository.findBySector2();
 		Double total = this.repository.findTotalJobs();
 		Double totalap = this.repository.findTotalApplication();
+		Collection<Object[]> accepted = this.repository.findByAccepted(moment);
+		Collection<Object[]> Pending = this.repository.findByPending(moment);
+		Collection<Object[]> Rejected = this.repository.findByRejected(moment);
 
 		Dashboard result = new Dashboard();
 		result.setNumberOfCompaniesGroupedBySector(numberOfCompaniesGroupedBySector);
@@ -54,6 +64,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setRatioOfApplicationsGroupedByStatus(gbs2);
 		result.setTotalJobs(total);
 		result.setTotalApplications(totalap);
+		result.setAccepted(accepted);
+		result.setPending(Pending);
+		result.setRejected(Rejected);
 
 		return result;
 
