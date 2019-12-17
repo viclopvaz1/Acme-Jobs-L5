@@ -1,6 +1,7 @@
 
 package acme.features.worker.application;
 
+import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,6 +87,13 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Collection<String> references;
+
+		if (!errors.hasErrors("referenceNumber")) {
+			references = this.repository.allReferences();
+			errors.state(request, !references.contains(entity.getReferenceNumber()), "referenceNumber", "worker.application.form.error.reference");
+		}
 
 	}
 

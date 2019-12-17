@@ -26,4 +26,7 @@ public interface WorkerApplicationRepository extends AbstractRepository {
 	@Query("select w from Worker w where w.id = ?1")
 	Worker findWorkerById(int workerId);
 
+	@Query("select a.referenceNumber from Application a")
+	Collection<String> allReferences();
+
 }
