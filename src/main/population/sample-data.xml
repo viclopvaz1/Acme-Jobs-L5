@@ -434,7 +434,7 @@
 
 	<bean name="auditor1auditor" class="acme.entities.roles.Auditor">
 		<property name="firm" value="firm1" />
-		<property name="responsibilityStatement" value="responsibilityStatement1" />
+		<property name="responsabilityStatement" value="responsabilityStatement1" />
 		<property name="userAccount" ref="auditor1UserAccount" />
 	</bean>
 
@@ -463,7 +463,7 @@
 
 	<bean name="auditor2auditor" class="acme.entities.roles.Auditor">
 		<property name="firm" value="firm1" />
-		<property name="responsibilityStatement" value="responsibilityStatement1" />
+		<property name="responsabilityStatement" value="responsabilityStatement1" />
 		<property name="userAccount" ref="auditor2UserAccount" />
 	</bean>
 

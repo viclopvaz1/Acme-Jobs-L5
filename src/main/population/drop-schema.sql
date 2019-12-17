@@ -1,4 +1,5 @@
-   alter table `administrator` 
+
+    alter table `administrator` 
        drop 
        foreign key FK_2a5vcjo3stlfcwadosjfq49l1;
 
@@ -26,6 +27,10 @@
        drop 
        foreign key FK_clqcq9lyspxdxcp6o4f3vkelj;
 
+    alter table `auditor_request` 
+       drop 
+       foreign key `FKjonb5lt00rmb868h6gjdjh1to`;
+
     alter table `authenticated` 
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
@@ -45,10 +50,6 @@
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
-
-    alter table `job` 
-       drop 
-       foreign key `FK15emyu82ye1j9lfl1wpo1i1ee`;
 
     alter table `job` 
        drop 
@@ -101,6 +102,8 @@
     drop table if exists `audit_record`;
 
     drop table if exists `auditor`;
+
+    drop table if exists `auditor_request`;
 
     drop table if exists `authenticated`;
 

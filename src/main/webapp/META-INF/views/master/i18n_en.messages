@@ -68,6 +68,11 @@ master.menu.administrator.comercial-banner = Create Comercial Banner
 
 master.menu.administrator.create-non-comercial-banner = Create non comercial banner
 master.menu.administrator.list-non-comercial-banner = List non comercial banner
+master.menu.administrator.list.auditor = List auditor request 
+
+# master.menu.auditor   ########################################################
+master.menu.user-account.become-auditor = Become an auditor
+master.menu.user-account.auditor =  Auditor data
 
 # master.menu.worker   ########################################################
 master.menu.worker = Worker
