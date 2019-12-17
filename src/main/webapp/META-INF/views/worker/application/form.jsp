@@ -24,6 +24,7 @@
 	     <acme:form-moment code="worker.application.form.label.moment"
 	      path="moment" 
 	      readonly="true"/>
+	      <acme:form-textbox code="worker.application.form.sponsor" path="worker.identity.fullName" readonly="true"/>
 	</jstl:if>
 	<acme:form-textarea code="worker.application.form.label.statement" path="statement" />
 	<acme:form-textarea code="worker.application.form.label.skills" path="skills" />

@@ -20,11 +20,13 @@
 	<acme:form-textarea code="sponsor.comercial-banner.form.slogan" path="slogan"/>
 	<acme:form-url code="sponsor.comercial-banner.form.targetUrl" path="targetUrl"/>
 	<acme:form-textbox code="sponsor.comercial-banner.form.creditCard" path="creditCard"/>
+	<acme:form-textbox code="sponsor.comercial-banner.form.name" path="name"/>
+	<acme:form-textbox code="sponsor.comercial-banner.form.network" path="network"/>
 	<acme:form-textbox code="sponsor.comercial-banner.form.monthExp" path="monthExp"/>
 	<acme:form-textbox code="sponsor.comercial-banner.form.yearExp" path="yearExp"/>
 	<acme:form-textbox code="sponsor.comercial-banner.form.cvv" path="cvv"/>
 	<jstl:if test="${command != 'create'}">
-		<acme:form-textbox code="sponsor.comercial-banner.form.sponsor" path="sponsor.identity.fullName"/>
+		<acme:form-textbox code="sponsor.comercial-banner.form.sponsor" path="sponsor.identity.fullName" readonly="true"/>
 	</jstl:if>
 	
 

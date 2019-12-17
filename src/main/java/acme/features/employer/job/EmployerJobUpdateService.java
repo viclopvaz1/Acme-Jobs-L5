@@ -90,6 +90,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		Double sumDuties;
 		int id;
 		Collection<String> references;
+		String reference;
 		Calendar calendar;
 		Date minimunDeadline;
 
@@ -117,12 +118,17 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		if (!errors.hasErrors("reference")) {
 			id = request.getModel().getInteger("id");
 			sumDuties = this.dutyRepository.sumDutiesJob(id);
+			if (sumDuties == null) {
+				sumDuties = 0.;
+			}
 			errors.state(request, sumDuties == 1.00, "reference", "employer.job.form.error.sumDuty");
 		}
 
 		if (!errors.hasErrors("reference")) {
 			references = this.repository.allReferences();
-			errors.state(request, !references.contains(entity.getReference()), "reference", "employer.job.form.error.reference");
+			id = request.getModel().getInteger("id");
+			reference = this.repository.findReferenceByJobId(id);
+			errors.state(request, !references.contains(entity.getReference()) || reference.equals(entity.getReference()), "reference", "employer.job.form.error.reference");
 		}
 
 		if (!errors.hasErrors("title")) {

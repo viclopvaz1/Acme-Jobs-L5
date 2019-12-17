@@ -38,6 +38,12 @@ public class ComercialBanner extends DomainEntity {
 	@CreditCardNumber
 	private String				creditCard;
 
+	@NotBlank
+	private String				name;
+
+	@NotBlank
+	private String				network;
+
 	@NotNull
 	@Range(min = 1, max = 12)
 	private Integer				monthExp;

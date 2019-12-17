@@ -3,7 +3,6 @@ package acme.features.sponsor.comercialbanner;
 
 import java.util.Calendar;
 import java.util.Collection;
-import java.util.GregorianCalendar;
 import java.util.HashSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,18 +27,6 @@ public class SponsorComercialBannerCreateService implements AbstractCreateServic
 	public boolean authorise(final Request<ComercialBanner> request) {
 		assert request != null;
 
-		//		boolean result;
-		//		Principal principal;
-		//		Sponsor sponsor;
-		//		int id;
-		//
-		//		principal = request.getPrincipal();
-		//		id = principal.getAccountId();
-		//		sponsor = this.repository.findSponsorById(id);
-		//
-		//		result = sponsor.getCreditCard().isEmpty();
-		//
-		//		return !result;
 		return true;
 	}
 
@@ -59,7 +46,7 @@ public class SponsorComercialBannerCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "targetUrl", "creditCard", "monthExp", "yearExp", "cvv");
+		request.unbind(entity, model, "picture", "slogan", "targetUrl", "creditCard", "name", "network", "monthExp", "yearExp", "cvv");
 
 	}
 
@@ -98,12 +85,12 @@ public class SponsorComercialBannerCreateService implements AbstractCreateServic
 			spam.add(s);
 		}
 
-		Calendar calendar = new GregorianCalendar();
-		Integer month = calendar.getTime().getMonth();
-		Integer year = calendar.getTime().getYear() + 1900;
+		Calendar calendar = Calendar.getInstance();
+		Integer month = calendar.get(Calendar.MONTH) + 1;
+		Integer year = calendar.get(Calendar.YEAR);
 
 		if (!errors.hasErrors("monthExp")) {
-			errors.state(request, entity.getYearExp() > year || entity.getMonthExp() >= month && entity.getYearExp() == year, "monthExp", "sponsor.comercial-banner.form.error.monthExp");
+			errors.state(request, entity.getYearExp() > year || entity.getMonthExp() >= month && entity.getYearExp().equals(year), "monthExp", "sponsor.comercial-banner.form.error.monthExp");
 		}
 
 		if (!errors.hasErrors("yearExp")) {

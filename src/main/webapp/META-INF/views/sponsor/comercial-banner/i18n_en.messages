@@ -10,11 +10,13 @@
 
 sponsor.comercial-banner.form.picture = Picture:
 sponsor.comercial-banner.form.slogan = Slogan:
-sponsor.comercial-banner.form.targetUrl = Target URL
-sponsor.comercial-banner.form.creditCard = Credit Card
-sponsor.comercial-banner.form.monthExp = Month Expire
-sponsor.comercial-banner.form.yearExp = Year Expire
-sponsor.comercial-banner.form.cvv = CVV
+sponsor.comercial-banner.form.targetUrl = Target URL:
+sponsor.comercial-banner.form.creditCard = Credit Card:
+sponsor.comercial-banner.form.name = Name:
+sponsor.comercial-banner.form.network = Network:
+sponsor.comercial-banner.form.monthExp = Month Expire:
+sponsor.comercial-banner.form.yearExp = Year Expire:
+sponsor.comercial-banner.form.cvv = CVV:
 sponsor.comercial-banner.form.sponsor = Sponsor:
 
 sponsor.comercial-banner.label.picture = Picture

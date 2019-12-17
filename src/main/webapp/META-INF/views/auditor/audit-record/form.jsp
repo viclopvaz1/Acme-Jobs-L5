@@ -22,8 +22,8 @@
 		<acme:form-textarea code="auditor.audit-record.form.label.body" path="body"/>
 		<jstl:if test="${command!='create' }">
 			<acme:form-moment code="auditor.audit-record.form.label.moment" path="moment"/>
-			<acme:form-textbox code="auditor.audit-record.form.label.auditor" path="auditor.identity.fullName"/>
-			<acme:form-textbox code="auditor.audit-record.form.label.job" path="job.reference"/>
+			<acme:form-textbox code="auditor.audit-record.form.label.auditor" path="auditor.identity.fullName" readonly="true"/>
+			<acme:form-textbox code="auditor.audit-record.form.label.job" path="job.reference" readonly="true"/>
 		</jstl:if>
 	</jstl:if>
 	<acme:form-checkbox code="auditor.audit-record.form.label.status" path="status"/>
