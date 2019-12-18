@@ -17,16 +17,20 @@ import acme.framework.entities.Administrator;
 public class AdministratorAuditorRequestController extends AbstractController<Administrator, AuditorRequest> {
 
 	@Autowired
-	AdministratorAuditorRequestListService	listService;
+	AdministratorAuditorRequestListService		listService;
 
 	@Autowired
-	AdministratorAuditorRequestShowService	showService;
+	AdministratorAuditorRequestShowService		showService;
+
+	@Autowired
+	AdministratorAuditorRequestDeleteService	deleteService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 
 }
