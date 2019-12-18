@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.HashSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -79,6 +80,16 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 		Date minimunDeadline;
 		Collection<String> references;
 
+		String palabrasSpam;
+		String[] split;
+		Collection<String> spam = new HashSet<>();
+
+		palabrasSpam = this.repository.spamWords();
+		split = palabrasSpam.split(", ");
+		for (String s : split) {
+			spam.add(s);
+		}
+
 		if (!errors.hasErrors("deadline")) {
 			calendar = new GregorianCalendar();
 			calendar.add(Calendar.DAY_OF_MONTH, 7);
@@ -93,6 +104,32 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 		if (!errors.hasErrors("reference")) {
 			references = this.repository.allReferences();
 			errors.state(request, !references.contains(entity.getReference()), "reference", "employer.job.form.error.reference");
+		}
+
+		if (!errors.hasErrors("title")) {
+			boolean isSpam = false;
+			for (String s : spam) {
+				if (entity.getTitle().toLowerCase().contains(s.toLowerCase())) {
+					isSpam = true;
+					break;
+
+				}
+
+			}
+
+			errors.state(request, !isSpam, "title", "employer.job.form.error.spamWordsTitle");
+		}
+
+		if (!errors.hasErrors("description")) {
+			boolean isSpam = false;
+			for (String s : spam) {
+				if (entity.getDescription().toLowerCase().contains(s.toLowerCase())) {
+					isSpam = true;
+					break;
+				}
+			}
+
+			errors.state(request, !isSpam, "description", "employer.job.form.error.spamWordsDescription");
 		}
 
 	}

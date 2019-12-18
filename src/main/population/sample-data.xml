@@ -176,6 +176,8 @@
 		<property name="slogan" value="Siente el sabor" />
 		<property name="targetUrl" value="https://www.cocacola.es/es/home/" />
 		<property name="creditCard" value="4679489831381972" />
+		<property name="name" value="Sponsor 2"/>
+		<property name="network" value="Visa"/>
 		<property name="monthExp" value="5"/>
 		<property name="yearExp" value="2020"/>
 		<property name="cvv" value="192"/>
@@ -188,6 +190,8 @@
 		<property name="slogan" value="Compra" />
 		<property name="targetUrl" value="https://www.carrefous.es/es/home/" />
 		<property name="creditCard" value="4294939855393654" />
+		<property name="name" value="Sponsor 1"/>
+		<property name="network" value="Visa"/>
 		<property name="monthExp" value="5"/>
 		<property name="yearExp" value="2020"/>
 		<property name="cvv" value="192"/>
@@ -282,9 +286,9 @@
 	
 	<bean name="application1" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EMP1-JOB1:W101" />
-		<property name= "moment" value= "2019/11/18 10:00"/>
+		<property name="moment" value="2019/12/01 10:00"/>
 		<property name="status" value="accepted" />
-		<property name="statement" value="statement1" />
+		<property name="statement" value="pepe" />
 		<property name="skills" value="Mu bueno" />
 		<property name="qualifications" value="Universidad de la vida" />
 		<property name="job" ref="job1" />
@@ -292,9 +296,9 @@
 	</bean>
 	<bean name="application2" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EMP1-JOB1:W102" />
-		<property name= "moment" value= "2019/11/18 10:00"/>
-		<property name="status" value="rejected" />
-		<property name="statement" value="statement2" />
+		<property name="moment" value="2019/12/13 10:00"/>
+		<property name="status" value="accepted" />
+		<property name="statement" value="pepe" />
 		<property name="skills" value="Mu bueno" />
 		<property name="qualifications" value="Universidad de Sevilla" />
 		<property name="job" ref="job1" />
@@ -302,14 +306,55 @@
 	</bean>
 	<bean name="application3" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EMP1-JOB2:W201" />
-		<property name= "moment" value= "2019/11/18 10:00"/>
-		<property name="status" value="rejected" />
-		<property name="statement" value="statement3" />
+		<property name="moment" value="2019/12/11 10:00"/>
+		<property name="status" value="accepted" />
+		<property name="statement" value="pepe" />
 		<property name="skills" value="Mu bueno" />
 		<property name="qualifications" value="Universidad de Sevilla" />
 		<property name="job" ref="job2" />
 		<property name="worker" ref="worker2Worker" />
 	</bean>
+	<bean name="application4" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="EMP1-JOB5:W101" />
+		<property name= "moment" value="2019/12/12 10:00"/>
+		<property name="status" value="pending" />
+		<property name="statement" value="pepe" />
+		<property name="skills" value="Mu bueno" />
+		<property name="qualifications" value="Universidad de la vida" />
+		<property name="job" ref="job1" />
+		<property name="worker" ref="worker1Worker" />
+	</bean>
+	<bean name="application5" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="EMP1-JOB7:W101" />
+		<property name="moment" value="2019/12/06 10:00"/>
+		<property name="status" value="pending" />
+		<property name="statement" value="pepe" />
+		<property name="skills" value="Mu bueno" />
+		<property name="qualifications" value="Universidad de la vida" />
+		<property name="job" ref="job1" />
+		<property name="worker" ref="worker1Worker" />
+	</bean>
+	<bean name="application6" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="EMP1-JOB8:W101" />
+		<property name="moment" value="2019/12/12 10:00"/>
+		<property name="status" value="rejected" />
+		<property name="statement" value="pepe" />
+		<property name="skills" value="Mu bueno" />
+		<property name="qualifications" value="Universidad de la vida" />
+		<property name="job" ref="job1" />
+		<property name="worker" ref="worker1Worker" />
+	</bean>
+	<bean name="application7" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="EMP1-JOB4:W101" />
+		<property name="moment" value="2019/12/12 10:00"/>
+		<property name="status" value="rejected" />
+		<property name="statement" value="pepe" />
+		<property name="skills" value="Mu bueno" />
+		<property name="qualifications" value="Universidad de la vida" />
+		<property name="job" ref="job1" />
+		<property name="worker" ref="worker1Worker" />
+	</bean>
+	
 	
 	<bean name="job2" class="acme.entities.jobs.Job">
 		<property name="reference" value="EMP2-JOB2" />
@@ -393,7 +438,7 @@
 
 	<bean name="auditor1auditor" class="acme.entities.roles.Auditor">
 		<property name="firm" value="firm1" />
-		<property name="responsibilityStatement" value="responsibilityStatement1" />
+		<property name="responsabilityStatement" value="responsabilityStatement1" />
 		<property name="userAccount" ref="auditor1UserAccount" />
 	</bean>
 
@@ -422,7 +467,7 @@
 
 	<bean name="auditor2auditor" class="acme.entities.roles.Auditor">
 		<property name="firm" value="firm1" />
-		<property name="responsibilityStatement" value="responsibilityStatement1" />
+		<property name="responsabilityStatement" value="responsabilityStatement1" />
 		<property name="userAccount" ref="auditor2UserAccount" />
 	</bean>
 
@@ -500,7 +545,6 @@
 
 	<bean name="sponsor2sponsor" class="acme.entities.roles.Sponsor">
 		<property name="organisationName" value="sponsor 2, Inc." />
-		<property name="creditCard" value="4679489831381972" />
 		<property name="userAccount" ref="sponsor2UserAccount" />
 	</bean>
 
@@ -529,7 +573,6 @@
 
 	<bean name="sponsor1sponsor" class="acme.entities.roles.Sponsor">
 		<property name="organisationName" value="sponsor 1, Inc." />
-		<property name="creditCard" value="4679489831381972" />
 		<property name="userAccount" ref="sponsor1UserAccount" />
 	</bean>
 

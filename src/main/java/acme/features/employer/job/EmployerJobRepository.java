@@ -25,4 +25,15 @@ public interface EmployerJobRepository extends AbstractRepository {
 	@Query("select j.reference from Job j")
 	Collection<String> allReferences();
 
+	@Query("select j.reference from Job j where j.id = ?1")
+	String findReferenceByJobId(int id);
+
+	@Query("select c.spamWords from Configuration c")
+	String spamWords();
+
+	@Query("select count(a) from Application a where a.job.employer.id = ?1")
+	int findTotalApplicationByEmployerId(int employerId);
+
+	@Query("select count(ad) from AuditRecord ad where ad.job.id = ?1")
+	int findAllAuditRecordByJobId(int jobId);
 }

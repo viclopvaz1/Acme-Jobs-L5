@@ -25,6 +25,7 @@ public class EmployerJobListMineService implements AbstractListService<Employer,
 		assert request != null;
 
 		return true;
+
 	}
 
 	@Override

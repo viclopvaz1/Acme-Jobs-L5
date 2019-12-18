@@ -1,5 +1,3 @@
-
-
 # i18n_en.messages
 #
 # Copyright (c) 2019 Rafael Corchuelo.
@@ -68,6 +66,11 @@ master.menu.administrator.comercial-banner = Create Comercial Banner
 
 master.menu.administrator.create-non-comercial-banner = Create non comercial banner
 master.menu.administrator.list-non-comercial-banner = List non comercial banner
+master.menu.administrator.list.auditor = List auditor request 
+
+# master.menu.auditor   ########################################################
+master.menu.user-account.become-auditor = Become an auditor
+master.menu.user-account.auditor =  Auditor data
 
 # master.menu.worker   ########################################################
 master.menu.worker = Worker
@@ -92,12 +95,15 @@ master.menu.employer.list-mine-application = List Applications
 master.menu.auditor = Auditor
 master.menu.auditor.list-mine-job = List Auditor Jobs
 master.menu.auditor.list-no-mine-job = List Auditor No Jobs
+master.menu.auditor.list-mine-audit-record = List of audits records
 
 # master.menu.sponsor ########################################################
 
 master.menu.sponsor = Sponsor
 master.menu.sponsor.list-mine-comercial-banner = List Sponsor Comercial Banner
+master.menu.sponsor.create-comercial-banner = Create Comercial Banner
 master.menu.sponsor.list-mine-non-comercial-banner = List Sponsor Non Comercial Banner
+master.menu.sponsor.create-non-comercial-banner = Create Non Comercial Banner
 
 # master.menu.consumer ##########################################################
 
@@ -116,6 +122,8 @@ master.menu.user-account.become-employer = Become a employer
 master.menu.user-account.employer = Employer data
 master.menu.user-account.become-worker = Become a worker
 master.menu.user-account.worker = Worker data
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.sponsor = Sponsor data
 
 
 
@@ -166,5 +174,4 @@ master.license.text = \
 	automatically for a maximum of 31 days, and "language" to store your language \
 	preferences. Additionally, we store an item called "returnStack" in your browser's \
 	local storage to keep track of the document to which some buttons must return.
-
 

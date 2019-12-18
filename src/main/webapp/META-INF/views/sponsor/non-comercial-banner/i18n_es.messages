@@ -17,3 +17,8 @@ sponsor.non-comercial-banner.label.picture = Imagen
 sponsor.non-comercial-banner.label.slogan = Eslogan
 
 sponsor.non-comercial-banner.form.button.return = Volver
+sponsor.non-comercial-banner.form.button.create = Crear
+sponsor.non-comercial-banner.form.button.update = Actualizar
+sponsor.non-comercial-banner.form.button.delete = Borrar
+
+sponsor.non-comercial-banner.form.error.spamWordsSlogan = El Eslogan contiene Palabras de Spam
