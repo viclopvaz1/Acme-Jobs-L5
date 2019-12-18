@@ -6,7 +6,6 @@ import javax.persistence.Index;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Range;
@@ -50,7 +49,6 @@ public class CompanyRecord extends DomainEntity {
 	@Email
 	private String				email;
 
-	@NotNull
 	private boolean				indication;
 
 	@Range(min = 0, max = 5)
