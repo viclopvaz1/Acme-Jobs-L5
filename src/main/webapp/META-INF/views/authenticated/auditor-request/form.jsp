@@ -21,5 +21,7 @@
 	<acme:form-textarea code="authenticated.auditor-request.form.label.responsabilityStatement" path="responsabilityStatement" />
 
 	<acme:form-submit test="${command == 'create'}" code="authenticated.auditor-request.form.button.create" action="/authenticated/auditor-request/create"/>
-	<acme:form-return code="authenticated.auditor-request.form.button.return" />
+
+  	<acme:form-return code="authenticated.auditor-request.form.button.return" />
+	
 </acme:form>

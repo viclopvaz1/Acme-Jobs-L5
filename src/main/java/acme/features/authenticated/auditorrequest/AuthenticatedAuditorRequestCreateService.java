@@ -7,10 +7,13 @@ import org.springframework.stereotype.Service;
 import acme.entities.auditorrequests.AuditorRequest;
 import acme.entities.roles.Auditor;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.components.Response;
 import acme.framework.entities.Authenticated;
 import acme.framework.entities.Principal;
+import acme.framework.helpers.PrincipalHelper;
 import acme.framework.services.AbstractCreateService;
 
 @Service
@@ -55,12 +58,12 @@ public class AuthenticatedAuditorRequestCreateService implements AbstractCreateS
 		int userAccountId;
 		Principal principal;
 
+		result = new AuditorRequest();
+
 		principal = request.getPrincipal();
 		userAccountId = principal.getAccountId();
 		authenticated = this.repository.findOneAuthenticatedByUserAccountId(userAccountId);
-		result = new AuditorRequest();
 		result.setAuthenticated(authenticated);
-
 		return result;
 	}
 
@@ -69,12 +72,12 @@ public class AuthenticatedAuditorRequestCreateService implements AbstractCreateS
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		if (!errors.hasErrors()) {
+		if (!errors.hasErrors("responsabilityStatement")) {
 			Principal principal = request.getPrincipal();
 			Integer userAccountId = principal.getAccountId();
 			AuditorRequest audR = this.repository.findOneAuditorRequestByUserAccountId(userAccountId);
 			boolean exist = audR != null;
-			errors.state(request, !exist, "responsibilityStatement", "auditor.error.exist");
+			errors.state(request, !exist, "responsabilityStatement", "auditor.error.exist");
 		}
 
 	}
@@ -83,7 +86,18 @@ public class AuthenticatedAuditorRequestCreateService implements AbstractCreateS
 	public void create(final Request<AuditorRequest> request, final AuditorRequest entity) {
 		assert request != null;
 		assert entity != null;
+
 		this.repository.save(entity);
 
+	}
+
+	@Override
+	public void onSuccess(final Request<AuditorRequest> request, final Response<AuditorRequest> response) {
+		assert request != null;
+		assert response != null;
+
+		if (request.isMethod(HttpMethod.POST)) {
+			PrincipalHelper.handleUpdate();
+		}
 	}
 }

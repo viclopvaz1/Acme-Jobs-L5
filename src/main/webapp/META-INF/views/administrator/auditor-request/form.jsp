@@ -23,5 +23,8 @@
 
     <acme:form-submit code="administrator.auditor.form.button.accept" action="/administrator/auditor/create?id=${id}"/>
 
+    <acme:form-submit code="administrator.auditor.form.button.reject" action="/administrator/auditor-request/delete"/>
+
+
   	<acme:form-return code="administrator.auditor.form.button.return"/>
 </acme:form>

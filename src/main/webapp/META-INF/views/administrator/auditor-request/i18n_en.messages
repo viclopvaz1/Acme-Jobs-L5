@@ -12,6 +12,7 @@ administrator.auditor.form.label.firm = Firm
 administrator.auditor.form.label.responsabilityStatement = Responsability statement
 
 administrator.auditor.form.button.accept = Accept
+administrator.auditor.form.button.reject = Reject
 administrator.auditor.form.button.return = Return
 
 administrator.auditor.list.label.firm = Firm
