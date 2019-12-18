@@ -38,7 +38,7 @@ public class AuthenticatedAuditorRequestCreateService implements AbstractCreateS
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		request.bind(entity, errors, "status");
+		request.bind(entity, errors);
 	}
 
 	@Override
@@ -59,7 +59,6 @@ public class AuthenticatedAuditorRequestCreateService implements AbstractCreateS
 		Principal principal;
 
 		result = new AuditorRequest();
-		result.setStatus(false);
 
 		principal = request.getPrincipal();
 		userAccountId = principal.getAccountId();
@@ -73,12 +72,12 @@ public class AuthenticatedAuditorRequestCreateService implements AbstractCreateS
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		if (!errors.hasErrors()) {
+		if (!errors.hasErrors("responsabilityStatement")) {
 			Principal principal = request.getPrincipal();
 			Integer userAccountId = principal.getAccountId();
 			AuditorRequest audR = this.repository.findOneAuditorRequestByUserAccountId(userAccountId);
 			boolean exist = audR != null;
-			errors.state(request, !exist, "responsibilityStatement", "auditor.error.exist");
+			errors.state(request, !exist, "responsabilityStatement", "auditor.error.exist");
 		}
 
 	}
@@ -87,8 +86,6 @@ public class AuthenticatedAuditorRequestCreateService implements AbstractCreateS
 	public void create(final Request<AuditorRequest> request, final AuditorRequest entity) {
 		assert request != null;
 		assert entity != null;
-
-		entity.setStatus(true);
 
 		this.repository.save(entity);
 

@@ -63,8 +63,8 @@
        `id` integer not null,
         `version` integer not null,
         `firm` varchar(255),
+        `request` integer,
         `responsability_statement` varchar(255),
-        `status` bit,
         `authenticated_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;

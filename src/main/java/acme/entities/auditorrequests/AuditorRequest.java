@@ -25,9 +25,6 @@ public class AuditorRequest extends DomainEntity {
 	private String				responsabilityStatement;
 
 	@NotNull
-	private Boolean				status;
-
-	@NotNull
 	@Valid
 	@OneToOne(optional = false)
 	private Authenticated		authenticated;
