@@ -138,6 +138,7 @@ master.menu.authenticated.list-challenge= List of challenges
 master.menu.authenticated.list-job = List of Jobs
 master.menu.authenticated.list-mine-thread = List of my threads
 master.menu.authenticated.list-thread = List of threads
+master.menu.authenticated.create-thread = Create Thread
 
 # master.footer ###############################################################
 

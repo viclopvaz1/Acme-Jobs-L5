@@ -25,7 +25,7 @@
 	<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/show?id=${id}');
 	redirect('/authenticated/participation/list?threadId=${id}')" class="btn btn-primary">
 	<acme:message code="authenticated.thread.form.button.participation.list"/>
-	</button>		´
+	</button>		
 	<acme:form-submit
 	code="authenticated.participation.form.button.create" 
 	action="/authenticated/participation/create?threadId=${id}" method="get"/>

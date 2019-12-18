@@ -75,9 +75,9 @@
 			<acme:menu-suboption code="master.menu.authenticated.list-mine-thread" action="/authenticated/thread/list-mine" />
 
 			<acme:menu-suboption code="master.menu.authenticated.list-thread" action="/authenticated/thread/list" />
+			
+			<acme:menu-suboption code="master.menu.authenticated.create-thread" action="/authenticated/thread/create" />
       
-       <acme:menu-suboption code="master.menu.authenticated.auditor-request" action="/authenticated/auditor-create/create" />
-
 
 		</acme:menu-option>
 

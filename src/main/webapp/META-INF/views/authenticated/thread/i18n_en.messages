@@ -15,3 +15,5 @@ authenticated.thread.form.label.messages.title= Title
 authenticated.thread.form.label.messages.author = User
 authenticated.thread.form.label.messages = Messages
 authenticated.thread.form.label.messages.tags =Tags
+
+authenticated.thread.form.button.create = Create

@@ -12,7 +12,7 @@
 	     <acme:form-moment code="authenticated.message.form.label.moment"
 	      path="moment" 
 	      readonly="true"/>     
-		<acme:form-textarea code="authenticated.message.form.label.user" path="author" />
+		<acme:form-textarea code="authenticated.message.form.label.user.identity.fullName" path="author" />
 	</jstl:if>
 
 	<acme:form-textarea code="authenticated.message.form.label.body" path="body" />
@@ -20,6 +20,7 @@
 	<jstl:if test="${command == 'create'}">
 	<acme:form-checkbox code="authenticated.message.form.label.check" path="check" />
 	</jstl:if>
+	
 	<acme:form-return code="authenticated.message.form.button.return" />
 	
 	<acme:form-submit test="${command == 'create' }" code="authenticated.message.form.button.create" action="/authenticated/message/create?threadId=${threadId}" method ="post" />
