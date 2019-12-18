@@ -64,6 +64,7 @@
         `version` integer not null,
         `firm` varchar(255),
         `responsability_statement` varchar(255),
+        `status` bit,
         `authenticated_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -318,7 +319,6 @@ create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
 
     alter table `auditor_request` 
        add constraint UK_thc46ns3ddg7rpxbnnbfsbrai unique (`authenticated_id`);
-       
 create index IDX5moeha500qc8gc2o08r23r0u3 on `company_record` (`star`);
 create index IDXj49047yahjjtbpt7ttxtuc5k7 on `investor_record` (`star`);
 create index IDX28ur9xm72oo1df9g14xhnh8h3 on `job` (`status`);
