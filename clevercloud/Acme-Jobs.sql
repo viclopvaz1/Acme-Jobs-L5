@@ -109,8 +109,10 @@ CREATE TABLE `application` (
   `version` int(11) NOT NULL,
   `moment` datetime(6) DEFAULT NULL,
   `qualifications` varchar(1024) DEFAULT NULL,
+  `reason` varchar(1024) DEFAULT NULL,
   `reference_number` varchar(255) DEFAULT NULL,
   `skills` varchar(255) DEFAULT NULL,
+  `statement` varchar(1024) DEFAULT NULL,
   `status` varchar(255) DEFAULT NULL,
   `job_id` int(11) NOT NULL,
   `worker_id` int(11) NOT NULL,
@@ -177,7 +179,7 @@ CREATE TABLE `auditor` (
   `version` int(11) NOT NULL,
   `user_account_id` int(11) DEFAULT NULL,
   `firm` varchar(255) DEFAULT NULL,
-  `responsibility_statement` varchar(255) DEFAULT NULL,
+  `responsability_statement` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_clqcq9lyspxdxcp6o4f3vkelj` (`user_account_id`),
   CONSTRAINT `FK_clqcq9lyspxdxcp6o4f3vkelj` FOREIGN KEY (`user_account_id`) REFERENCES `user_account` (`id`)
@@ -191,6 +193,34 @@ CREATE TABLE `auditor` (
 LOCK TABLES `auditor` WRITE;
 /*!40000 ALTER TABLE `auditor` DISABLE KEYS */;
 /*!40000 ALTER TABLE `auditor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auditor_request`
+--
+
+DROP TABLE IF EXISTS `auditor_request`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `auditor_request` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `firm` varchar(255) DEFAULT NULL,
+  `responsability_statement` varchar(255) DEFAULT NULL,
+  `authenticated_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_thc46ns3ddg7rpxbnnbfsbrai` (`authenticated_id`),
+  CONSTRAINT `FKjonb5lt00rmb868h6gjdjh1to` FOREIGN KEY (`authenticated_id`) REFERENCES `authenticated` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auditor_request`
+--
+
+LOCK TABLES `auditor_request` WRITE;
+/*!40000 ALTER TABLE `auditor_request` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auditor_request` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -296,6 +326,8 @@ CREATE TABLE `comercial_banner` (
   `credit_card` varchar(255) DEFAULT NULL,
   `cvv` int(11) DEFAULT NULL,
   `month_exp` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `network` varchar(255) DEFAULT NULL,
   `picture` varchar(255) DEFAULT NULL,
   `slogan` varchar(255) DEFAULT NULL,
   `target_url` varchar(255) DEFAULT NULL,
@@ -576,13 +608,11 @@ CREATE TABLE `job` (
   `salary_currency` varchar(255) DEFAULT NULL,
   `status` bit(1) NOT NULL,
   `title` varchar(255) DEFAULT NULL,
-  `auditor_id` int(11) NOT NULL,
   `employer_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_7jmfdvs0b0jx7i33qxgv22h7b` (`reference`),
-  KEY `FK15emyu82ye1j9lfl1wpo1i1ee` (`auditor_id`),
+  KEY `IDX28ur9xm72oo1df9g14xhnh8h3` (`status`),
   KEY `FK3rxjf8uh6fh2u990pe8i2at0e` (`employer_id`),
-  CONSTRAINT `FK15emyu82ye1j9lfl1wpo1i1ee` FOREIGN KEY (`auditor_id`) REFERENCES `auditor` (`id`),
   CONSTRAINT `FK3rxjf8uh6fh2u990pe8i2at0e` FOREIGN KEY (`employer_id`) REFERENCES `employer` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -610,10 +640,13 @@ CREATE TABLE `message` (
   `moment` datetime(6) DEFAULT NULL,
   `tags` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
-  `user_id` int(11) NOT NULL,
+  `authenticated_id` int(11) NOT NULL,
+  `thread_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `FKik4epe9dp5q6uenarfyia7xin` (`user_id`),
-  CONSTRAINT `FKik4epe9dp5q6uenarfyia7xin` FOREIGN KEY (`user_id`) REFERENCES `authenticated` (`id`)
+  KEY `FK3ny0h1379q528toyokq81noiu` (`authenticated_id`),
+  KEY `FK28hjkn063wrsjuiyyf8sm3s2v` (`thread_id`),
+  CONSTRAINT `FK28hjkn063wrsjuiyyf8sm3s2v` FOREIGN KEY (`thread_id`) REFERENCES `thread` (`id`),
+  CONSTRAINT `FK3ny0h1379q528toyokq81noiu` FOREIGN KEY (`authenticated_id`) REFERENCES `authenticated` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -689,6 +722,35 @@ CREATE TABLE `offer` (
 LOCK TABLES `offer` WRITE;
 /*!40000 ALTER TABLE `offer` DISABLE KEYS */;
 /*!40000 ALTER TABLE `offer` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `participation`
+--
+
+DROP TABLE IF EXISTS `participation`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `participation` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `authenticated_id` int(11) DEFAULT NULL,
+  `thread_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKd49qqi98v3aa6v9v5atuinodj` (`authenticated_id`),
+  KEY `FKk6j425rhm4ahsi6cf2bg2um4l` (`thread_id`),
+  CONSTRAINT `FKd49qqi98v3aa6v9v5atuinodj` FOREIGN KEY (`authenticated_id`) REFERENCES `authenticated` (`id`),
+  CONSTRAINT `FKk6j425rhm4ahsi6cf2bg2um4l` FOREIGN KEY (`thread_id`) REFERENCES `thread` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `participation`
+--
+
+LOCK TABLES `participation` WRITE;
+/*!40000 ALTER TABLE `participation` DISABLE KEYS */;
+/*!40000 ALTER TABLE `participation` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -789,7 +851,6 @@ CREATE TABLE `sponsor` (
   `id` int(11) NOT NULL,
   `version` int(11) NOT NULL,
   `user_account_id` int(11) DEFAULT NULL,
-  `credit_card` varchar(255) DEFAULT NULL,
   `organisation_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_20xk0ev32hlg96kqynl6laie2` (`user_account_id`),
@@ -818,7 +879,10 @@ CREATE TABLE `thread` (
   `version` int(11) NOT NULL,
   `moment` datetime(6) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `creator_user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKi65xvfq1rocjb1dhmv9n6vxh5` (`creator_user_id`),
+  CONSTRAINT `FKi65xvfq1rocjb1dhmv9n6vxh5` FOREIGN KEY (`creator_user_id`) REFERENCES `authenticated` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -840,11 +904,11 @@ DROP TABLE IF EXISTS `thread_authenticated`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `thread_authenticated` (
   `thread_id` int(11) NOT NULL,
-  `users_id` int(11) NOT NULL,
-  UNIQUE KEY `UK_t69jud9gwiunbu3cx39uycwxb` (`users_id`),
+  `authenticated_id` int(11) NOT NULL,
+  KEY `FK3qnqdrafjae0b206n1u8mh06f` (`authenticated_id`),
   KEY `FKjsja3s5mr66x5nxm9dd8kut3r` (`thread_id`),
-  CONSTRAINT `FKjsja3s5mr66x5nxm9dd8kut3r` FOREIGN KEY (`thread_id`) REFERENCES `thread` (`id`),
-  CONSTRAINT `FKkuamwlt147dsxim98bfhh4dsr` FOREIGN KEY (`users_id`) REFERENCES `authenticated` (`id`)
+  CONSTRAINT `FK3qnqdrafjae0b206n1u8mh06f` FOREIGN KEY (`authenticated_id`) REFERENCES `authenticated` (`id`),
+  CONSTRAINT `FKjsja3s5mr66x5nxm9dd8kut3r` FOREIGN KEY (`thread_id`) REFERENCES `thread` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -854,7 +918,7 @@ CREATE TABLE `thread_authenticated` (
 
 LOCK TABLES `thread_authenticated` WRITE;
 /*!40000 ALTER TABLE `thread_authenticated` DISABLE KEYS */;
-INSERT INTO `thread_authenticated` VALUES (413,397);
+INSERT INTO `thread_authenticated` VALUES (527,507),(528,507);
 /*!40000 ALTER TABLE `thread_authenticated` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -881,6 +945,7 @@ CREATE TABLE `thread_message` (
 
 LOCK TABLES `thread_message` WRITE;
 /*!40000 ALTER TABLE `thread_message` DISABLE KEYS */;
+INSERT INTO `thread_message` VALUES (527,526),(528,523),(528,524),(528,525);
 /*!40000 ALTER TABLE `thread_message` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -911,7 +976,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$izzToZrx0/b3DFNFZwyUf.EDMIDjHEhnQbrM/nQRngJsred7RwCze','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$IRLIMEBTvAZEepGFW2sloOrMkuBhlZ5gu63ufXWsreCls/iHiK54G','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$KAt0tm2JjSBWWsPir48i8OUnVqvwPYgFE7Fdr2SoYq100jstjSJr.','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$KvIGv.zmA.LAeZIjONTUOOq38y4ZzNrXVBNzouXzg9EUFb8CGkP7u','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -952,4 +1017,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-04 18:39:45
+-- Dump completed on 2019-12-18 18:09:41
