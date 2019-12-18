@@ -35,10 +35,6 @@
 		
 	<acme:form-submit test="${command == 'show' && status ==false}"
 		code="auditor.audit-record.form.button.update" 
-		action="/auditor/audit-record/update?id=${id}" method = "get"/>
-		
-	<acme:form-submit test="${command == 'update'}"
-		code="auditor.audit-record.form.button.updatecheck" 
 		action="/auditor/audit-record/update"/>
 		
 	<acme:form-return code="auditor.audit-record.form.button.return"/>

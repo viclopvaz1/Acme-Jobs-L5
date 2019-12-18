@@ -1,4 +1,3 @@
-
     create table `administrator` (
        `id` integer not null,
         `version` integer not null,
@@ -63,7 +62,6 @@
        `id` integer not null,
         `version` integer not null,
         `firm` varchar(255),
-        `request` integer,
         `responsability_statement` varchar(255),
         `authenticated_id` integer not null,
         primary key (`id`)

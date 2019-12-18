@@ -24,5 +24,5 @@
 	<acme:form-textbox code="authenticated.audit-record.form.label.auditor" path="auditor.identity.fullName"/>
 	<acme:form-textbox code="authenticated.audit-record.form.label.job" path="job.reference"/>
 
-	<<acme:form-return code="authenticated.job.form.button.return"/>
+	<acme:form-return code="authenticated.job.form.button.return"/>
 </acme:form> 
