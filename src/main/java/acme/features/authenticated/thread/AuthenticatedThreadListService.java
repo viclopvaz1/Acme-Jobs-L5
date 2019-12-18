@@ -14,7 +14,7 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedThreadListMineService implements AbstractListService<Authenticated, Thread> {
+public class AuthenticatedThreadListService implements AbstractListService<Authenticated, Thread> {
 
 	@Autowired
 	AuthenticatedThreadRepository repository;
@@ -48,7 +48,7 @@ public class AuthenticatedThreadListMineService implements AbstractListService<A
 		Principal principal;
 
 		principal = request.getPrincipal();
-		result = this.repository.findManyByAuthenticatedId(principal.getActiveRoleId());
+		result = this.repository.findManyThreadByAuthenticatedId(principal.getActiveRoleId());
 
 		return result;
 	}

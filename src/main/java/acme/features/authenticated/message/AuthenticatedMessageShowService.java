@@ -1,7 +1,7 @@
 
 package acme.features.authenticated.message;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,8 +31,7 @@ public class AuthenticatedMessageShowService implements AbstractShowService<Auth
 
 		threadId = request.getModel().getInteger("id");
 		thread = this.repository.findThreadByMessageId(threadId);
-
-		List<Authenticated> users = (List<Authenticated>) thread.getAuthenticated();
+		Collection<Authenticated> users = this.repository.findManyByThreadId(thread.getId());
 		principal = request.getPrincipal();
 		result = users.stream().filter(x -> x.getUserAccount().getId() == principal.getAccountId()).count() > 0;
 		return result;
@@ -45,7 +44,7 @@ public class AuthenticatedMessageShowService implements AbstractShowService<Auth
 		assert model != null;
 
 		request.unbind(entity, model, "title", "moment", "body", "tags");
-		model.setAttribute("author", entity.getUser().getUserAccount().getUsername());
+		model.setAttribute("author", entity.getAuthenticated().getUserAccount().getUsername());
 
 	}
 

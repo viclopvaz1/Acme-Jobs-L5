@@ -14,16 +14,21 @@ import acme.framework.entities.Authenticated;
 
 @Controller
 @RequestMapping("/authenticated/message/")
-public class AutheticatedMessageController extends AbstractController<Authenticated, Message> {
+public class AuthenticatedMessageController extends AbstractController<Authenticated, Message> {
 
 	@Autowired
-	private AuthenticatedMessageListService	listService;
+	private AuthenticatedMessageListService		listService;
+
 	@Autowired
-	private AuthenticatedMessageShowService	showService;
+	private AuthenticatedMessageShowService		showService;
+
+	@Autowired
+	private AuthenticatedMessageCreateService	createService;
 
 
 	@PostConstruct
 	private void initialise() {
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 

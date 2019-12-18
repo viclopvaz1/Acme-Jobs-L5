@@ -522,73 +522,7 @@
 		
 	</bean>
 	
-	<bean name="message1" class="acme.entities.messages.Message">
-		<property name="title" value="Title 1" />
-		<property name="moment" value="2028/12/10 04:00" />
-		<property name="tags" value="Scrum" />
-		<property name="body" value="what is this problem" />
-		<property name="user" ref="worker1Authenticathed" />
-	</bean>
 
-	<bean name="message2" class="acme.entities.messages.Message">
-		<property name="title" value="Title 2" />
-		<property name="moment" value="2034/12/23 01:00" />
-		<property name="tags" value="design,agile" />
-		<property name="body" value="People with experience" />
-		<property name="user" ref="worker1Authenticathed" />
-	</bean>
-
-	<bean name="message3" class="acme.entities.messages.Message">
-		<property name="title" value="Title 3" />
-		<property name="moment" value="2028/11/21 01:00" />
-		<property name="tags">
-			<null />
-		</property>
-		<property name="body" value="People fresh" />
-		<property name="user" ref="worker1Authenticathed" />
-	</bean>
-
-	<bean name="message4" class="acme.entities.messages.Message">
-		<property name="title" value="Title 4" />
-		<property name="moment" value="2019/6/21 11:00" />
-		<property name="tags">
-			<null />
-		</property>
-		<property name="body" value="This is a difficult job" />
-		<property name="user" ref="employer1Authenticated" />
-	</bean>
-	
-	<bean id="thread01" class="acme.entities.threads.Thread">
-		<property name="title" value="Thread01"/>
-		<property name="moment" value="2030/12/11 10:00"/>
-		<property name="messages">
-			<list>
-				<ref bean="message4" />
-			</list>
-		</property>
-		<property name="authenticated">
-			<list>
-				<ref bean="employer1Authenticated" />
-			</list>
-		</property>
-	</bean>
-	
-	<bean name="thread02" class="acme.entities.threads.Thread">
-		<property name="title" value="Sample thread 2" />
-		<property name="moment" value="2030/12/11 23:59" />
-		<property name="messages">
-			<list>
-				<ref bean="message1" />
-				<ref bean="message2" />
-				<ref bean="message3" />
-			</list>
-		</property>
-		<property name="authenticated">
-			<list>
-				<ref bean="employer1Authenticated" />
-			</list>
-		</property>
-		</bean>
 	
 	<bean name="sponsor2UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="sponsor2" />
@@ -645,5 +579,63 @@
 	<bean name="sponsor1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="sponsor1UserAccount" />
 	</bean>
+		<bean name="message1" class="acme.entities.messages.Message">
+		<property name="title" value="Title 1" />
+		<property name="moment" value="2028/12/10 04:00" />
+		<property name="tags" value="Scrum" />
+		<property name="body" value="what is this problem" />
+		<property name="authenticated" ref="worker1Authenticathed" />
+		<property name="thread" ref="thread01" />
+	</bean>
+
+	<bean name="message2" class="acme.entities.messages.Message">
+		<property name="title" value="Title 2" />
+		<property name="moment" value="2034/12/23 01:00" />
+		<property name="tags" value="design,agile" />
+		<property name="body" value="People with experience" />
+		<property name="authenticated" ref="worker1Authenticathed" />
+		<property name="thread" ref="thread01" />
+		
+	</bean>
+
+	<bean name="message3" class="acme.entities.messages.Message">
+		<property name="title" value="Title 3" />
+		<property name="moment" value="2028/11/21 01:00" />
+		<property name="tags">
+			<null />
+		</property>
+		<property name="body" value="People fresh" />
+		<property name="authenticated" ref="worker1Authenticathed" />
+		<property name="thread" ref="thread01" />
+	</bean>
+
+	<bean name="message4" class="acme.entities.messages.Message">
+		<property name="title" value="Title 4" />
+		<property name="moment" value="2019/6/21 11:00" />
+		<property name="tags">
+			<null />
+		</property>
+		<property name="body" value="This is a difficult job" />
+		<property name="authenticated" ref="employer1Authenticated" />
+		<property name="thread" ref="thread01" />
+	</bean>
+	
+	<bean id="thread01" class="acme.entities.threads.Thread">
+		<property name="title" value="Thread01"/>
+		<property name="moment" value="2030/12/11 10:00"/>
+		<property name="creatorUser" ref="employer1Authenticated"/>
+	</bean>
+	
+	
+	<bean name="thread02" class="acme.entities.threads.Thread">
+		<property name="title" value="Sample thread 2" />
+		<property name="moment" value="2030/12/11 23:59" />
+		<property name="creatorUser" ref="employer1Authenticated"/>
+		</bean>
+		
+		<bean name="participation01" class="acme.entities.participations.Participation">
+		<property name="thread" ref="thread01"/>
+		<property name="authenticated" ref="worker1Authenticathed" />
+		</bean>
 	
 </beans>
