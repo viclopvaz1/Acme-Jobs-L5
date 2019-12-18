@@ -1,7 +1,7 @@
 
 package acme.features.authenticated.thread;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,14 +27,16 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 
 		boolean result;
 		int threadId;
-		Thread thread;
 		Principal principal;
-
-		threadId = request.getModel().getInteger("id");
-		thread = this.repository.findOneThreadById(threadId);
-		List<Authenticated> users = (List<Authenticated>) thread.getAuthenticated();
 		principal = request.getPrincipal();
-		result = users.stream().filter(x -> x.getUserAccount().getId() == principal.getAccountId()).count() > 0;
+		threadId = request.getModel().getInteger("id");
+		if (principal.getActiveRoleId() != this.repository.findCreatorUserByThreadId(threadId)) {
+			Collection<Integer> users = this.repository.findManyAuthenticatedIdByThreadId(threadId);
+			result = users.contains(principal.getActiveRoleId());
+		} else {
+			result = true;
+		}
+
 		return result;
 	}
 
@@ -44,6 +46,11 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 		assert entity != null;
 		assert model != null;
 		request.unbind(entity, model, "title", "moment");
+		int threadId;
+		Principal principal;
+		principal = request.getPrincipal();
+		threadId = request.getModel().getInteger("id");
+		model.setAttribute("creador", principal.getActiveRoleId() != this.repository.findCreatorUserByThreadId(threadId));
 	}
 
 	@Override

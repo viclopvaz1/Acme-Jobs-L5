@@ -4,10 +4,14 @@ authenticated.thread.form.label.title = Title
 authenticated.thread.form.label.moment = Date
 
 authenticated.thread.form.button.return = Return
+authenticated.participation.form.button.return = Return
 authenticated.thread.form.button.message = Messages
-authenticated.thread.form.button.participation.list = User's
-authenticated.participation.form.button.create= Add users
-authenticated.message.form.button.create= create message
+authenticated.participation.form.label.authenticated= User's name
+authenticated.participation.form.button.create= Add
+authenticated.participation.form.button.delete= Delete
+authenticated.participation.list.label.authenticated = User's name
+authenticated.participant.error.name= The user is already added
+
 
 authenticated.thread.form.label.messages.moment = Messages moment
 authenticated.thread.form.label.messages.body = Body

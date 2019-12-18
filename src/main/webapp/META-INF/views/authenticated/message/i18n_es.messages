@@ -14,3 +14,9 @@ authenticated.message.form.label.title= Titulo del mensaje
 authenticated.message.form.label.user = Usuario 
 authenticated.message.form.label.messages = Mensajes
 authenticated.message.form.label.tags =Tags
+authenticated.message.form.label.check = Confirmar
+authenticated.message.error.check = Debes confirmar
+
+employer.job.form.error.spamWordsTitle = Hay palabras de spam en el titulo
+employer.job.form.error.spamWordsBody = Hay palabras de spam en el cuerpo
+employer.job.form.error.spamWordsTags = Hay palabras de spam en tags
