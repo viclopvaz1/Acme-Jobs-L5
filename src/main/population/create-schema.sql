@@ -98,6 +98,8 @@
         `credit_card` varchar(255),
         `cvv` integer,
         `month_exp` integer,
+        `name` varchar(255),
+        `network` varchar(255),
         `picture` varchar(255),
         `slogan` varchar(255),
         `target_url` varchar(255),
@@ -261,7 +263,6 @@
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
-        `credit_card` varchar(255),
         `organisation_name` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;

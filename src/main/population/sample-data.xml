@@ -176,6 +176,8 @@
 		<property name="slogan" value="Siente el sabor" />
 		<property name="targetUrl" value="https://www.cocacola.es/es/home/" />
 		<property name="creditCard" value="4679489831381972" />
+		<property name="name" value="Sponsor 2"/>
+		<property name="network" value="Visa"/>
 		<property name="monthExp" value="5"/>
 		<property name="yearExp" value="2020"/>
 		<property name="cvv" value="192"/>
@@ -188,6 +190,8 @@
 		<property name="slogan" value="Compra" />
 		<property name="targetUrl" value="https://www.carrefous.es/es/home/" />
 		<property name="creditCard" value="4294939855393654" />
+		<property name="name" value="Sponsor 1"/>
+		<property name="network" value="Visa"/>
 		<property name="monthExp" value="5"/>
 		<property name="yearExp" value="2020"/>
 		<property name="cvv" value="192"/>
@@ -607,7 +611,6 @@
 
 	<bean name="sponsor2sponsor" class="acme.entities.roles.Sponsor">
 		<property name="organisationName" value="sponsor 2, Inc." />
-		<property name="creditCard" value="4679489831381972" />
 		<property name="userAccount" ref="sponsor2UserAccount" />
 	</bean>
 
@@ -636,7 +639,6 @@
 
 	<bean name="sponsor1sponsor" class="acme.entities.roles.Sponsor">
 		<property name="organisationName" value="sponsor 1, Inc." />
-		<property name="creditCard" value="4679489831381972" />
 		<property name="userAccount" ref="sponsor1UserAccount" />
 	</bean>
 

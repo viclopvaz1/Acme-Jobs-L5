@@ -25,8 +25,9 @@
 	<acme:form-textarea code="employer.job.form.label.description" path="description"/>
 	<acme:form-url code="employer.job.form.label.moreInfo" path="moreInfo"/>
 	<jstl:if test="${command != 'create'}">
-		<acme:form-textbox code="employer.job.form.label.status" path="status"/>
-	    <acme:form-textbox code="employer.job.form.label.employer" path="employer.identity.fullName" />	
+		<%-- <acme:form-textbox code="employer.job.form.label.status" path="status"/> --%>
+		<acme:form-checkbox code="employer.job.form.label.status" path="status"/>
+	    <acme:form-textbox code="employer.job.form.label.employer" path="employer.identity.fullName" readonly="true" />	
 	</jstl:if>
 
 	
@@ -47,8 +48,8 @@
 		action="/employer/job/delete"/>
 
 	
-	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.audit-record" action="/authenticated/audit-record/list-mine?jobid=${id}"  method="get"/>
-	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.duty" action="/authenticated/duty/list-mine?jobid=${id}"  method="get"/>
-	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.create-duty" action="/authenticated/duty/create?jobid=${id}" method="get"/>
+	<acme:form-submit test="${command == 'show' && status == true}" code="employer.job.form.button.audit-record" action="/authenticated/audit-record/list-mine?jobid=${id}"  method="get"/>
+	<acme:form-submit test="${command == 'show' || command == 'update' }" code="employer.job.form.button.duty" action="/authenticated/duty/list-mine?jobid=${id}"  method="get"/>
+	<acme:form-submit test="${command == 'show' || command == 'update' }" code="employer.job.form.button.create-duty" action="/authenticated/duty/create?jobid=${id}" method="get"/>
   	<acme:form-return code="employer.job.form.button.return"/>
 </acme:form>

@@ -46,7 +46,7 @@ public class AuthenticatedSponsorCreateService implements AbstractCreateService<
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "organisationName", "creditCard");
+		request.unbind(entity, model, "organisationName");
 
 	}
 
