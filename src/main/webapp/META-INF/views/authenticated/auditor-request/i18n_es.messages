@@ -10,5 +10,8 @@
 
 authenticated.auditor-request.form.label.firm = Firma:
 authenticated.auditor-request.form.label.responsabilityStatement = Responsabilidades:
+
 authenticated.auditor-request.form.button.create = Solicitar
 authenticated.auditor-request.form.button.return = Return
+
+auditor.error.exist = Ya has enviado una solicitud para ser Auditor

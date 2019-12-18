@@ -13,6 +13,7 @@ administrator.auditor.form.label.responsabilityStatement = Declaración de respo
 
 
 administrator.auditor.form.button.accept = Aceptar
+administrator.auditor.form.button.reject = Rechazar
 administrator.auditor.form.button.return = Volver
 
 administrator.auditor.list.label.firm = Firma
