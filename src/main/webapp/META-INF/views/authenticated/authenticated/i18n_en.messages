@@ -5,9 +5,6 @@ authenticated.thread.form.label.moment = Date
 
 authenticated.thread.form.button.return = Return
 authenticated.thread.form.button.message = Messages
-authenticated.thread.form.button.participation.list = User's
-authenticated.participation.form.button.create= Add users
-authenticated.message.form.button.create= create message
 
 authenticated.thread.form.label.messages.moment = Messages moment
 authenticated.thread.form.label.messages.body = Body

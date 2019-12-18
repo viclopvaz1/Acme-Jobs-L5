@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.thread;
+package acme.features.authenticated.authenticated;
 
 import java.util.Collection;
 
@@ -11,7 +11,7 @@ import acme.framework.entities.Authenticated;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedThreadRepository extends AbstractRepository {
+public interface AuthenticatedAuthenticatedRepository extends AbstractRepository {
 
 	@Query("select t from Thread t  where t.id = ?1")
 	Thread findOneThreadById(int id);
@@ -28,11 +28,8 @@ public interface AuthenticatedThreadRepository extends AbstractRepository {
 	@Query("select t.creatorUser.id from Thread t where t.id = ?1")
 	Integer findCreatorUserByThreadId(int threadId);
 
-	@Query("select p.thread from Participation p where p.authenticated.id = ?1")
-	Collection<Thread> findManyThreadByAuthenticatedId(int activeRoleId);
-
-	@Query("select p.authenticated.id from Participation p where p.thread.id = ?1")
-	Collection<Integer> findManyAuthenticatedIdByThreadId(int threadId);
+	@Query("select a from Authenticated a ")
+	Collection<Authenticated> findAllAuthenticated();
 
 }
 //@Query("select a from Authenticated a where a.id in(select a.thread.authenticated.id from Thread t where t.users.id = ?1")

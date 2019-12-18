@@ -134,7 +134,8 @@ master.menu.authenticated.list-company-record = Lista de Compañías
 master.menu.authenticated.list-investor-record =  Lista de Records
 master.menu.authenticated.list-challenge= Lista de Retos
 master.menu.authenticated.list-job = Lista de Trabajos
-master.menu.authenticated.list-mine-thread = Lista de hilos
+master.menu.authenticated.list-mine-thread = Lista de mis hilos
+master.menu.authenticated.list-thread = Lista de hilos
 
 ﻿# master.footer ###############################################################
 

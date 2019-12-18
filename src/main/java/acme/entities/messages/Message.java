@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import acme.entities.threads.Thread;
 import acme.framework.entities.Authenticated;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -40,6 +41,11 @@ public class Message extends DomainEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Authenticated		user;
+	private Authenticated		authenticated;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Thread				thread;
 
 }

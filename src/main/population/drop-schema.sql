@@ -1,4 +1,5 @@
-   alter table `administrator` 
+
+    alter table `administrator` 
        drop 
        foreign key FK_2a5vcjo3stlfcwadosjfq49l1;
 
@@ -48,19 +49,27 @@
 
     alter table `job` 
        drop 
-       foreign key `FK15emyu82ye1j9lfl1wpo1i1ee`;
-
-    alter table `job` 
-       drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
     alter table `message` 
        drop 
-       foreign key `FKik4epe9dp5q6uenarfyia7xin`;
+       foreign key `FK3ny0h1379q528toyokq81noiu`;
+
+    alter table `message` 
+       drop 
+       foreign key `FK28hjkn063wrsjuiyyf8sm3s2v`;
 
     alter table `non_comercial_banner` 
        drop 
        foreign key `FK26pi62yqe29w5hdmmhfx0gcg9`;
+
+    alter table `participation` 
+       drop 
+       foreign key `FKd49qqi98v3aa6v9v5atuinodj`;
+
+    alter table `participation` 
+       drop 
+       foreign key `FKk6j425rhm4ahsi6cf2bg2um4l`;
 
     alter table `provider` 
        drop 
@@ -70,21 +79,9 @@
        drop 
        foreign key FK_20xk0ev32hlg96kqynl6laie2;
 
-    alter table `thread_authenticated` 
+    alter table `thread` 
        drop 
-       foreign key `FK3qnqdrafjae0b206n1u8mh06f`;
-
-    alter table `thread_authenticated` 
-       drop 
-       foreign key `FKjsja3s5mr66x5nxm9dd8kut3r`;
-
-    alter table `thread_message` 
-       drop 
-       foreign key `FKrjegm8cujrxgbce9n1b78xuyo`;
-
-    alter table `thread_message` 
-       drop 
-       foreign key `FKgjodhp3io8v829t92y1tdtb7u`;
+       foreign key `FKi65xvfq1rocjb1dhmv9n6vxh5`;
 
     alter table `worker` 
        drop 
@@ -130,6 +127,8 @@
 
     drop table if exists `offer`;
 
+    drop table if exists `participation`;
+
     drop table if exists `provider`;
 
     drop table if exists `request`;
@@ -139,10 +138,6 @@
     drop table if exists `sponsor`;
 
     drop table if exists `thread`;
-
-    drop table if exists `thread_authenticated`;
-
-    drop table if exists `thread_message`;
 
     drop table if exists `user_account`;
 
