@@ -21,6 +21,7 @@ worker.application.form.label.qualifications = Qualifications:
 worker.application.form.label.statement = Statement:
 worker.application.form.button.createApplication = Apply
 worker.application.form.label.referenceNumber = Reference number:
+worker.application.form.error.reference = Existing reference, try another
 
 
 

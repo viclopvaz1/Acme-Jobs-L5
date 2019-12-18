@@ -25,3 +25,4 @@ worker.application.form.label.skills = Skills:
 worker.application.form.label.qualifications = Titulaciones:
 worker.application.form.label.statement = Informe:
 worker.application.form.button.createApplication = Solicitar
+worker.application.form.error.reference = Referencia existente, pruebe con otra

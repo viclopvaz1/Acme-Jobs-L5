@@ -34,6 +34,8 @@ employer.job.form.button.return = Return
 
 employer.job.form.placeholder.reference = Recomended the format: EMP1-JOB1
 
+administrator.challenge.form.error.tooClose = Deadline must be one week after the current date
+
 employer.job.form.error.zoneEurS = Only the euro, EUR or € currency is allowed
 employer.job.form.error.sumDuty = The sum of the percentages of the Duties must sum 1
 employer.job.form.error.reference = Existing reference, try another

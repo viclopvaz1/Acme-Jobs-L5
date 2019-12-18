@@ -33,6 +33,8 @@ employer.job.form.button.return = Volver
 
 employer.job.form.placeholder.reference = Recomendado el formato: EMP1-JOB1
 
+administrator.challenge.form.error.tooClose = La Fecha de Fin debe estar una semana posterior a la fecha actual
+
 employer.job.form.error.zoneEurS = Solo se permite la moneda euro, EUR o €
 employer.job.form.error.sumDuty = La suma de los porcentajes de las Responsabilidades deben sumar 1
 employer.job.form.error.reference = Referencia existente, pruebe con otra
